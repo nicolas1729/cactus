@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="cactusmavenApp.lieu.detail.title">Lieu</span> {{lieu.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.lieu.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{lieu.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.lieu.latitude">Latitude</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{lieu.latitude}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.lieu.longitude">Longitude</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{lieu.longitude}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="cactusmavenApp.terrain.detail.title">Terrain</span> {{terrain.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.terrain.nom">Nom</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{terrain.nom}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.terrain.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{terrain.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.terrain.prodeau">Prodeau</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{terrain.prodeau}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusmavenApp.terrain.prodnour">Prodnour</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{terrain.prodnour}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

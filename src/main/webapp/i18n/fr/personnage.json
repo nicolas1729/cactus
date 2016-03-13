@@ -1,0 +1,35 @@
+{
+    "cactusApp": {
+        "personnage" : {
+            "home": {
+                "title": "Personnages",
+                "createLabel": "Créer un nouveau Personnage",
+                "createOrEditLabel": "Créer ou éditer un Personnage",
+                "search": "Search for Personnage"
+            },
+            "created": "Un nouveau Personnage a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Personnage avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Personnage avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Personnage {{ id }} ?"
+            },
+            "detail": {
+                "title": "Personnage"
+            },
+            "nom": "Nom",
+            "description": "Description",
+            "mort": "Mort",
+            "fatigue": "Fatigue",
+            "blessure": "Blessure",
+            "compcombat": "Compétence au combat",
+            "compconstruire": "Compétence de contruction",
+            "compeau": "Compétence de production d'eau",
+            "comfabriquer": "Compétence de fabrication",
+            "compnour": "Compétence de production de nourriture",
+            "compsoigner": "Compétence de guérison",
+            "datecreation": "Date creation",
+            "datefin": "Date fin"
+        }
+    }
+}
+

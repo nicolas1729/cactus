@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTerrainLabel" translate="cactusmavenApp.terrain.home.createOrEditLabel">Create or edit a Terrain</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="terrain.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cactusmavenApp.terrain.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="terrain.nom"
+                    required />
+            <div ng-show="editForm.nom.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nom.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cactusmavenApp.terrain.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="terrain.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cactusmavenApp.terrain.prodeau" for="field_prodeau">Prodeau</label>
+            <input type="number" class="form-control" name="prodeau" id="field_prodeau"
+                    ng-model="terrain.prodeau"
+                    required />
+            <div ng-show="editForm.prodeau.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prodeau.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.prodeau.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="cactusmavenApp.terrain.prodnour" for="field_prodnour">Prodnour</label>
+            <input type="number" class="form-control" name="prodnour" id="field_prodnour"
+                    ng-model="terrain.prodnour"
+                    required />
+            <div ng-show="editForm.prodnour.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prodnour.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.prodnour.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

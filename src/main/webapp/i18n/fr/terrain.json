@@ -1,0 +1,26 @@
+{
+    "cactusmavenApp": {
+        "terrain" : {
+            "home": {
+                "title": "Terrains",
+                "createLabel": "Créer un nouveau Terrain",
+                "createOrEditLabel": "Créer ou éditer un Terrain",
+                "search": "Search for Terrain"
+            },
+            "created": "Un nouveau Terrain a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Terrain avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Terrain avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Terrain {{ id }} ?"
+            },
+            "detail": {
+                "title": "Terrain"
+            },
+            "nom": "Nom",
+            "description": "Description",
+            "prodeau": "Prodeau",
+            "prodnour": "Prodnour"
+        }
+    }
+}
+

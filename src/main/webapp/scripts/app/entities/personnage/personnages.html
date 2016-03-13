@@ -1,0 +1,81 @@
+<div>
+    <h2 translate="cactusApp.personnage.home.title">Personnages</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="personnage.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="cactusApp.personnage.home.createLabel">Create new Personnage
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nom"><span translate="cactusApp.personnage.nom">nom</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="cactusApp.personnage.description">description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="cactusApp.personnage.mort">mort</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fatigue"><span translate="cactusApp.personnage.fatigue">fatigue</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="blessure"><span translate="cactusApp.personnage.blessure">Blessure</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="compcombat"><span translate="cactusApp.personnage.compcombat">Compcombat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="compconstruire"><span translate="cactusApp.personnage.compconstruire">Compconstruire</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="compeau"><span translate="cactusApp.personnage.compeau">Compeau</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="comfabriquer"><span translate="cactusApp.personnage.comfabriquer">Comfabriquer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="compnour"><span translate="cactusApp.personnage.compnour">Compnour</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="compsoigner"><span translate="cactusApp.personnage.compsoigner">Compsoigner</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="datecreation"><span translate="cactusApp.personnage.datecreation">Datecreation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="datefin"><span translate="cactusApp.personnage.datefin">Datefin</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="personnage in personnages track by personnage.id">
+                    <td><a ui-sref="personnage.detail({id:personnage.id})">{{personnage.id}}</a></td>
+                    <td>{{personnage.nom}}</td>
+                    <td>{{personnage.description}}</td>
+                    <td>{{personnage.mort}}</td>
+                    <td>{{personnage.fatigue}}</td>
+                    <td>{{personnage.blessure}}</td>
+                    <td>{{personnage.compcombat}}</td>
+                    <td>{{personnage.compconstruire}}</td>
+                    <td>{{personnage.compeau}}</td>
+                    <td>{{personnage.comfabriquer}}</td>
+                    <td>{{personnage.compnour}}</td>
+                    <td>{{personnage.compsoigner}}</td>
+                        <td>{{personnage.datecreation | date:'mediumDate'}}</td>
+                        <td>{{personnage.datefin | date:'mediumDate'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="personnage.detail({id:personnage.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="personnage.edit({id:personnage.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="personnage.delete({id:personnage.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <uib-pager total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pager>
+</div>

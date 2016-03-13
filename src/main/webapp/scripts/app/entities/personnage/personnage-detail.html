@@ -1,0 +1,126 @@
+
+<div>
+    <h2><span translate="cactusApp.personnage.detail.title">Personnage</span> {{personnage.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.nom">Nom</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.nom}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.mort">Mort</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.mort}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.fatigue">Fatigue</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.fatigue}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.blessure">Blessure</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.blessure}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.compcombat">Compcombat</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.compcombat}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.compconstruire">Compconstruire</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.compconstruire}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.compeau">Compeau</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.compeau}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.comfabriquer">Comfabriquer</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.comfabriquer}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.compnour">Compnour</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.compnour}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.compsoigner">Compsoigner</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.compsoigner}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.datecreation">Datecreation</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.datecreation | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="cactusApp.personnage.datefin">Datefin</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{personnage.datefin | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

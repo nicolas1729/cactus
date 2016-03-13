@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "cactusMaven",
+    "packageName": "com.cactus",
+    "packageFolder": "com/cactus",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "gulp",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "a9f774f88ef7f2457e626d008f20a073e8ddbd91",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

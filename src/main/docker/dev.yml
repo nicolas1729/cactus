@@ -1,0 +1,7 @@
+cactusmaven-dev-mongodb:
+  container_name: cactusmaven-dev-mongodb
+  image: mongo:3.0.7
+  # volumes:
+  #   - ~/volumes/jhipster/cactusMaven/dev-mongodb/:/data/db/
+  ports:
+    - "27017:27017"
