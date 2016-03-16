@@ -26,7 +26,7 @@ public class LoggingAspect {
     @Inject
     private Environment env;
 
-    @Pointcut("execution(com.cactus.repository..*) || within(com.cactus.service..*) || within(com.cactus.web.rest..*)")
+    @Pointcut("within(com.cactus.repository..*) || within(com.cactus.service..*) || within(com.cactus.web.rest..*)")
     public void loggingPointcut() {
     }
 

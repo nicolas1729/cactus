@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .controller('TerrainDetailController', function ($scope, $rootScope, $stateParams, entity, Terrain) {
         $scope.terrain = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('cactusmavenApp')
                 $scope.terrain = result;
             });
         };
-        var unsubscribe = $rootScope.$on('cactusmavenApp:terrainUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('cactusApp:terrainUpdate', function(event, result) {
             $scope.terrain = result;
         });
         $scope.$on('$destroy', unsubscribe);

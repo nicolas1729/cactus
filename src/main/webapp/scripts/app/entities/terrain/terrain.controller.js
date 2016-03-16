@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .controller('TerrainController', function ($scope, $state, Terrain) {
 
         $scope.terrains = [];

@@ -71,7 +71,7 @@ public class MailService {
 
     @Async
     public void sendActivationEmail(User user, String baseUrl) {
-        log.debug("Sending activation e-mail to '{}'", user.getEmail());
+        log.debug("Sending activation e-mail to '{}' with baseUrl '{}'", user.getEmail(),baseUrl);
         Locale locale = Locale.forLanguageTag(user.getLangKey());
         Context context = new Context(locale);
         context.setVariable("user", user);

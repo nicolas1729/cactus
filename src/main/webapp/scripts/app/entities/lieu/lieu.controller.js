@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .controller('LieuController', function ($scope, $state, Lieu) {
 
         $scope.lieus = [];

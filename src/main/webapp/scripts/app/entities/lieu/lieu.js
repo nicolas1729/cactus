@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('lieu', {
@@ -8,7 +8,7 @@ angular.module('cactusmavenApp')
                 url: '/lieus',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'cactusmavenApp.lieu.home.title'
+                    pageTitle: 'cactusApp.lieu.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('cactusmavenApp')
                 url: '/lieu/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'cactusmavenApp.lieu.detail.title'
+                    pageTitle: 'cactusApp.lieu.detail.title'
                 },
                 views: {
                     'content@': {

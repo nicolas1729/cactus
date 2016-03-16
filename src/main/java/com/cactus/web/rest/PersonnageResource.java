@@ -3,6 +3,7 @@ package com.cactus.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import com.cactus.domain.Personnage;
 import com.cactus.repository.PersonnageRepository;
+import com.cactus.security.SecurityUtils;
 import com.cactus.web.rest.util.HeaderUtil;
 import com.cactus.web.rest.util.PaginationUtil;
 import com.cactus.web.rest.dto.PersonnageDTO;
@@ -55,6 +56,7 @@ public class PersonnageResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("personnage", "idexists", "A new personnage cannot already have an ID")).body(null);
         }
         //Personnage personnage = personnageMapper.personnageToPersonnage(personnage);
+        SecurityUtils.getCurrentUserLogin();
         Personnage result = personnageRepository.save(personnage);
         //PersonnageDTO result = personnageMapper.personnageToPersonnageDTO(personnage);
         return ResponseEntity.created(new URI("/api/personnages/" + result.getId()))

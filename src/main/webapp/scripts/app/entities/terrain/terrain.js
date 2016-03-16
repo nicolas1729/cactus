@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('terrain', {
@@ -8,7 +8,7 @@ angular.module('cactusmavenApp')
                 url: '/terrains',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'cactusmavenApp.terrain.home.title'
+                    pageTitle: 'cactusApp.terrain.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('cactusmavenApp')
                 url: '/terrain/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'cactusmavenApp.terrain.detail.title'
+                    pageTitle: 'cactusApp.terrain.detail.title'
                 },
                 views: {
                     'content@': {
@@ -51,7 +51,7 @@ angular.module('cactusmavenApp')
                 parent: 'terrain',
                 url: '/new',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_USER']
                 },
                 onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                     $uibModal.open({
@@ -73,14 +73,14 @@ angular.module('cactusmavenApp')
                         $state.go('terrain', null, { reload: true });
                     }, function() {
                         $state.go('terrain');
-                    })
+                    });
                 }]
             })
             .state('terrain.edit', {
                 parent: 'terrain',
                 url: '/{id}/edit',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_USER']
                 },
                 onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                     $uibModal.open({
@@ -96,14 +96,14 @@ angular.module('cactusmavenApp')
                         $state.go('terrain', null, { reload: true });
                     }, function() {
                         $state.go('^');
-                    })
+                    });
                 }]
             })
             .state('terrain.delete', {
                 parent: 'terrain',
                 url: '/{id}/delete',
                 data: {
-                    authorities: ['ROLE_USER'],
+                    authorities: ['ROLE_USER']
                 },
                 onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                     $uibModal.open({
@@ -119,7 +119,7 @@ angular.module('cactusmavenApp')
                         $state.go('terrain', null, { reload: true });
                     }, function() {
                         $state.go('^');
-                    })
+                    });
                 }]
             });
     });

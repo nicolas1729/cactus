@@ -1,7 +1,7 @@
 {
-  "name": "cactusmaven",
+  "name": "cactus",
   "version": "0.0.0",
-  "description": "Description for cactusMaven",
+  "description": "Description for cactus",
   "private": true,
   "cacheDirectories": [
     "node_modules",

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .controller('LieuDetailController', function ($scope, $rootScope, $stateParams, entity, Lieu) {
         $scope.lieu = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('cactusmavenApp')
                 $scope.lieu = result;
             });
         };
-        var unsubscribe = $rootScope.$on('cactusmavenApp:lieuUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('cactusApp:lieuUpdate', function(event, result) {
             $scope.lieu = result;
         });
         $scope.$on('$destroy', unsubscribe);

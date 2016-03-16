@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .factory('Lieu', function ($resource, DateUtils) {
         return $resource('api/lieus/:id', {}, {
             'query': { method: 'GET', isArray: true},

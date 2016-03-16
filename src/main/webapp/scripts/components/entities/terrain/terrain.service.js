@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
     .factory('Terrain', function ($resource, DateUtils) {
         return $resource('api/terrains/:id', {}, {
             'query': { method: 'GET', isArray: true},

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp').controller('LieuDialogController',
+angular.module('cactusApp').controller('LieuDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Lieu',
         function($scope, $stateParams, $uibModalInstance, entity, Lieu) {
 
@@ -12,7 +12,7 @@ angular.module('cactusmavenApp').controller('LieuDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('cactusmavenApp:lieuUpdate', result);
+            $scope.$emit('cactusApp:lieuUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

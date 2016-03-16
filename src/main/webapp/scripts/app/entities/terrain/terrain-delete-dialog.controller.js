@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp')
+angular.module('cactusApp')
 	.controller('TerrainDeleteController', function($scope, $uibModalInstance, entity, Terrain) {
 
         $scope.terrain = entity;

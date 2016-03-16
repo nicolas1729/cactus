@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cactusmavenApp').controller('TerrainDialogController',
+angular.module('cactusApp').controller('TerrainDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Terrain',
         function($scope, $stateParams, $uibModalInstance, entity, Terrain) {
 
@@ -12,7 +12,7 @@ angular.module('cactusmavenApp').controller('TerrainDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('cactusmavenApp:terrainUpdate', result);
+            $scope.$emit('cactusApp:terrainUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };
