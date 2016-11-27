@@ -1,0 +1,46 @@
+'use strict';
+
+describe('Controller Tests', function() {
+
+    describe('Personnage Management Detail Controller', function() {
+        var $scope, $rootScope;
+        var MockEntity, MockPreviousState, MockPersonnage, MockUser;
+        var createController;
+
+        beforeEach(inject(function($injector) {
+            $rootScope = $injector.get('$rootScope');
+            $scope = $rootScope.$new();
+            MockEntity = jasmine.createSpy('MockEntity');
+            MockPreviousState = jasmine.createSpy('MockPreviousState');
+            MockPersonnage = jasmine.createSpy('MockPersonnage');
+            MockUser = jasmine.createSpy('MockUser');
+            
+
+            var locals = {
+                '$scope': $scope,
+                '$rootScope': $rootScope,
+                'entity': MockEntity,
+                'previousState': MockPreviousState,
+                'Personnage': MockPersonnage,
+                'User': MockUser
+            };
+            createController = function() {
+                $injector.get('$controller')("PersonnageDetailController", locals);
+            };
+        }));
+
+
+        describe('Root Scope Listening', function() {
+            it('Unregisters root scope listener upon scope destruction', function() {
+                var eventType = 'cactusApp:personnageUpdate';
+
+                createController();
+                expect($rootScope.$$listenerCount[eventType]).toEqual(1);
+
+                $scope.$destroy();
+                expect($rootScope.$$listenerCount[eventType]).toBeUndefined();
+            });
+        });
+    });
+
+});

@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span>Personnage</span> {{vm.personnage.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Nom</span></dt>
+        <dd>
+            <span>{{vm.personnage.nom}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{vm.personnage.description}}</span>
+        </dd>
+        <dt><span>Mort</span></dt>
+        <dd>
+            <span>{{vm.personnage.mort}}</span>
+        </dd>
+        <dt><span>Blessure</span></dt>
+        <dd>
+            <span>{{vm.personnage.blessure}}</span>
+        </dd>
+        <dt><span>Fatigue</span></dt>
+        <dd>
+            <span>{{vm.personnage.fatigue}}</span>
+        </dd>
+        <dt><span>Compeau</span></dt>
+        <dd>
+            <span>{{vm.personnage.compeau}}</span>
+        </dd>
+        <dt><span>Compnour</span></dt>
+        <dd>
+            <span>{{vm.personnage.compnour}}</span>
+        </dd>
+        <dt><span>Compfabriquer</span></dt>
+        <dd>
+            <span>{{vm.personnage.compfabriquer}}</span>
+        </dd>
+        <dt><span>Compconstruire</span></dt>
+        <dd>
+            <span>{{vm.personnage.compconstruire}}</span>
+        </dd>
+        <dt><span>Compcombat</span></dt>
+        <dd>
+            <span>{{vm.personnage.compcombat}}</span>
+        </dd>
+        <dt><span>Compsoigner</span></dt>
+        <dd>
+            <span>{{vm.personnage.compsoigner}}</span>
+        </dd>
+        <dt><span>Datecreation</span></dt>
+        <dd>
+            <span>{{vm.personnage.datecreation | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Datefin</span></dt>
+        <dd>
+            <span>{{vm.personnage.datefin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.personnage.userId}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="personnage-detail.edit({id:vm.personnage.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

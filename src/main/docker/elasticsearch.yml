@@ -1,0 +1,10 @@
+version: '2'
+services:
+    cactus-elasticsearch:
+        container_name: cactus-elasticsearch
+        image: elasticsearch:2.4.1
+        # volumes:
+        #     - ~/volumes/jhipster/cactus/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
