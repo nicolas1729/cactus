@@ -9,64 +9,44 @@
 
     function stateConfig($stateProvider) {
         $stateProvider
-        .state('personnage', {
+        .state('terrain', {
             parent: 'entity',
-            url: '/personnage?page&sort&search',
+            url: '/terrain',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'Personnages'
+                pageTitle: 'Terrains'
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/personnage/personnages.html',
-                    controller: 'PersonnageController',
+                    templateUrl: 'app/entities/terrain/terrains.html',
+                    controller: 'TerrainController',
                     controllerAs: 'vm'
                 }
             },
-            params: {
-                page: {
-                    value: '1',
-                    squash: true
-                },
-                sort: {
-                    value: 'id,asc',
-                    squash: true
-                },
-                search: null
-            },
             resolve: {
-                pagingParams: ['$stateParams', 'PaginationUtil', function ($stateParams, PaginationUtil) {
-                    return {
-                        page: PaginationUtil.parsePage($stateParams.page),
-                        sort: $stateParams.sort,
-                        predicate: PaginationUtil.parsePredicate($stateParams.sort),
-                        ascending: PaginationUtil.parseAscending($stateParams.sort),
-                        search: $stateParams.search
-                    };
-                }],
             }
         })
-        .state('personnage-detail', {
+        .state('terrain-detail', {
             parent: 'entity',
-            url: '/personnage/{id}',
+            url: '/terrain/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'Personnage'
+                pageTitle: 'Terrain'
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/personnage/personnage-detail.html',
-                    controller: 'PersonnageDetailController',
+                    templateUrl: 'app/entities/terrain/terrain-detail.html',
+                    controller: 'TerrainDetailController',
                     controllerAs: 'vm'
                 }
             },
             resolve: {
-                entity: ['$stateParams', 'Personnage', function($stateParams, Personnage) {
-                    return Personnage.get({id : $stateParams.id}).$promise;
+                entity: ['$stateParams', 'Terrain', function($stateParams, Terrain) {
+                    return Terrain.get({id : $stateParams.id}).$promise;
                 }],
                 previousState: ["$state", function ($state) {
                     var currentStateData = {
-                        name: $state.current.name || 'personnage',
+                        name: $state.current.name || 'terrain',
                         params: $state.params,
                         url: $state.href($state.current.name, $state.params)
                     };
@@ -74,22 +54,22 @@
                 }]
             }
         })
-        .state('personnage-detail.edit', {
-            parent: 'personnage-detail',
+        .state('terrain-detail.edit', {
+            parent: 'terrain-detail',
             url: '/detail/edit',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/personnage/personnage-dialog.html',
-                    controller: 'PersonnageDialogController',
+                    templateUrl: 'app/entities/terrain/terrain-dialog.html',
+                    controller: 'TerrainDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
                     size: 'lg',
                     resolve: {
-                        entity: ['Personnage', function(Personnage) {
-                            return Personnage.get({id : $stateParams.id}).$promise;
+                        entity: ['Terrain', function(Terrain) {
+                            return Terrain.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {
@@ -99,16 +79,16 @@
                 });
             }]
         })
-        .state('personnage.new', {
-            parent: 'personnage',
+        .state('terrain.new', {
+            parent: 'terrain',
             url: '/new',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/personnage/new-personnage-dialog.html',
-                    controller: 'PersonnageDialogController',
+                    templateUrl: 'app/entities/terrain/terrain-dialog.html',
+                    controller: 'TerrainDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
                     size: 'lg',
@@ -117,72 +97,63 @@
                             return {
                                 nom: null,
                                 description: null,
-                                mort: false,
-                                blessure: 0,
-                                fatigue: 0,
-                                compeau: 0,
-                                compnour: 0,
-                                compfabriquer: 0,
-                                compconstruire: 0,
-                                compcombat: 0,
-                                compsoigner: 0,
-                                datecreation: null,
-                                datefin: null,
+                                prodeau: 0,
+                                prodnour: 0,
                                 id: null
                             };
                         }
                     }
                 }).result.then(function() {
-                    $state.go('^', null, { reload: 'false' });
+                    $state.go('terrain', null, { reload: 'terrain' });
                 }, function() {
-                    $state.go('^');
+                    $state.go('terrain');
                 });
             }]
         })
-        .state('personnage.edit', {
-            parent: 'personnage',
+        .state('terrain.edit', {
+            parent: 'terrain',
             url: '/{id}/edit',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/personnage/personnage-dialog.html',
-                    controller: 'PersonnageDialogController',
+                    templateUrl: 'app/entities/terrain/terrain-dialog.html',
+                    controller: 'TerrainDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
                     size: 'lg',
                     resolve: {
-                        entity: ['Personnage', function(Personnage) {
-                            return Personnage.get({id : $stateParams.id}).$promise;
+                        entity: ['Terrain', function(Terrain) {
+                            return Terrain.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('personnage', null, { reload: 'personnage' });
+                    $state.go('terrain', null, { reload: 'terrain' });
                 }, function() {
                     $state.go('^');
                 });
             }]
         })
-        .state('personnage.delete', {
-            parent: 'personnage',
+        .state('terrain.delete', {
+            parent: 'terrain',
             url: '/{id}/delete',
             data: {
                 authorities: ['ROLE_USER']
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/personnage/personnage-delete-dialog.html',
-                    controller: 'PersonnageDeleteController',
+                    templateUrl: 'app/entities/terrain/terrain-delete-dialog.html',
+                    controller: 'TerrainDeleteController',
                     controllerAs: 'vm',
                     size: 'md',
                     resolve: {
-                        entity: ['Personnage', function(Personnage) {
-                            return Personnage.get({id : $stateParams.id}).$promise;
+                        entity: ['Terrain', function(Terrain) {
+                            return Terrain.get({id : $stateParams.id}).$promise;
                         }]
                     }
                 }).result.then(function() {
-                    $state.go('personnage', null, { reload: 'personnage' });
+                    $state.go('terrain', null, { reload: 'terrain' });
                 }, function() {
                     $state.go('^');
                 });

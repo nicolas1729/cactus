@@ -52,4 +52,6 @@ public interface PersonnageService {
      *  @return the list of entities
      */
     Page<PersonnageDTO> search(String query, Pageable pageable);
+    
+    void removeNotActivatedPersonnages();
 }

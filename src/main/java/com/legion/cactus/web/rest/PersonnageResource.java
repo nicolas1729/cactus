@@ -1,6 +1,11 @@
 package com.legion.cactus.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import com.legion.cactus.domain.Personnage;
+import com.legion.cactus.domain.User;
+import com.legion.cactus.repository.PersonnageRepository;
+import com.legion.cactus.repository.UserRepository;
+import com.legion.cactus.security.SecurityUtils;
 import com.legion.cactus.service.PersonnageService;
 import com.legion.cactus.web.rest.util.HeaderUtil;
 import com.legion.cactus.web.rest.util.PaginationUtil;
@@ -18,6 +23,7 @@ import javax.inject.Inject;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +43,16 @@ public class PersonnageResource {
         
     @Inject
     private PersonnageService personnageService;
+    
+    @Inject
+    private PersonnageRepository personnageRepository;
 
+    @Inject
+    private UserRepository userRepository;
+    
+    //@Inject
+    //private LieuRepository lieuRepository;
+    
     /**
      * POST  /personnages : Create a new personnage.
      *
@@ -52,6 +67,23 @@ public class PersonnageResource {
         if (personnageDTO.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("personnage", "idexists", "A new personnage cannot already have an ID")).body(null);
         }
+        Optional<Personnage> existingNomPersonnage = personnageRepository.findOneByNom(personnageDTO.getNom());
+        if (existingNomPersonnage.isPresent() ) {
+            return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("personnage-management", "personnageexists", "Nom déjà utilisé")).body(null);
+        }
+        String login = SecurityUtils.getCurrentUserLogin();
+        Optional<User> user = userRepository.findOneByLogin(login);
+        personnageDTO.setUserId(user.get().getId());
+        //Optional<Lieu> lieu = lieuRepository.findOneByLongitudeAndLatitude(1,1);
+        //personnage.setLieu(lieu.get());
+        personnageDTO.setCompfabriquer(personnageDTO.getCompfabriquer());
+        personnageDTO.setCompcombat(personnageDTO.getCompcombat());
+        personnageDTO.setCompconstruire(personnageDTO.getCompconstruire());
+        personnageDTO.setCompeau(personnageDTO.getCompeau());
+        personnageDTO.setCompnour(personnageDTO.getCompnour());
+        personnageDTO.setCompsoigner(personnageDTO.getCompsoigner());
+        
+        personnageDTO.setDatecreation(LocalDate.now());
         PersonnageDTO result = personnageService.save(personnageDTO);
         return ResponseEntity.created(new URI("/api/personnages/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("personnage", result.getId().toString()))

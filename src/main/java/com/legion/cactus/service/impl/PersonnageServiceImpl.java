@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
+import org.springframework.scheduling.annotation.Scheduled;
 
 /**
  * Service Implementation for managing Personnage.
@@ -48,9 +49,6 @@ public class PersonnageServiceImpl implements PersonnageService{
      */
     public PersonnageDTO save(PersonnageDTO personnageDTO) {
         log.debug("Request to save Personnage : {}", personnageDTO);
-        if(personnageDTO.getDatecreation() == null){
-            personnageDTO.setDatecreation(LocalDate.now());
-        }
         Personnage personnage = personnageMapper.personnageDTOToPersonnage(personnageDTO);
         personnage = personnageRepository.save(personnage);
         PersonnageDTO result = personnageMapper.personnageToPersonnageDTO(personnage);
@@ -107,5 +105,25 @@ public class PersonnageServiceImpl implements PersonnageService{
         log.debug("Request to search for a page of Personnages for query {}", query);
         Page<Personnage> result = personnageSearchRepository.search(queryStringQuery(query), pageable);
         return result.map(personnage -> personnageMapper.personnageToPersonnageDTO(personnage));
+    }
+    
+    @Scheduled(cron = "0 0 2 * * ?")
+    public void removeNotActivatedPersonnages() {
+        List<Personnage> personnages = personnageRepository.findAll();
+        personnages.parallelStream().map((personnage) -> {
+            log.debug("update personnage fatigue + 1 {}", personnage.getNom());
+            return personnage;
+        }).map((personnage) -> {
+            int fatigue = personnage.getFatigue();
+            if(fatigue>1){
+                fatigue --;
+            }else{
+                fatigue = 0;
+            }
+            personnage.setFatigue(fatigue);
+            return personnage;
+        }).forEach((personnage) -> {
+            personnageRepository.save(personnage);
+        });
     }
 }

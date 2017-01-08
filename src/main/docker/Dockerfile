@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ENV JHIPSTER_SLEEP 0
+ENV JHIPSTER_SLEEP 50
 
 # add directly the war
 ADD *.war /app.war
