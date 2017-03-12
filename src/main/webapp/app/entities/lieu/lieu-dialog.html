@@ -62,7 +62,7 @@
 
         <div class="form-group">
             <label for="field_terrain">Terrain</label>
-            <select class="form-control" id="field_terrain" name="terrain" ng-model="vm.lieu.terrainId" ng-options="terrain.id as terrain.id for terrain in vm.terrains"            >
+            <select class="form-control" id="field_terrain" name="terrain" ng-model="vm.lieu.terrain.id" ng-options="terrain.id as terrain.nom for terrain in vm.terrains"            >
                 <option value=""></option>
             </select>
         </div>
