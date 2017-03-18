@@ -57,7 +57,11 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * });
    * </pre>
    *
+<<<<<<< HEAD
    * @param {object} rule Handler function that takes `$injector` and `$location`
+=======
+   * @param {function} rule Handler function that takes `$injector` and `$location`
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * services as arguments. You can use them to return a valid path as a string.
    *
    * @return {object} `$urlRouterProvider` - `$urlRouterProvider` instance
@@ -93,7 +97,11 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * });
    * </pre>
    *
+<<<<<<< HEAD
    * @param {string|object} rule The url path you want to redirect to or a function 
+=======
+   * @param {string|function} rule The url path you want to redirect to or a function 
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * rule that returns the url path. The function version is passed two params: 
    * `$injector` and `$location` services, and must return a url string.
    *
@@ -122,7 +130,13 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * @methodOf ui.router.router.$urlRouterProvider
    *
    * @description
+<<<<<<< HEAD
    * Registers a handler for a given url matching. if handle is a string, it is
+=======
+   * Registers a handler for a given url matching. 
+   * 
+   * If the handler is a string, it is
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * treated as a redirect, and is interpolated according to the syntax of match
    * (i.e. like `String.replace()` for `RegExp`, or like a `UrlMatcher` pattern otherwise).
    *
@@ -151,7 +165,11 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    * </pre>
    *
    * @param {string|object} what The incoming path that you want to redirect.
+<<<<<<< HEAD
    * @param {string|object} handler The path you want to redirect your user to.
+=======
+   * @param {string|function} handler The path you want to redirect your user to.
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    */
   this.when = function (what, handler) {
     var redirect, handlerIsString = isString(handler);
@@ -262,8 +280,13 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
    *
    */
   this.$get = $get;
+<<<<<<< HEAD
   $get.$inject = ['$location', '$rootScope', '$injector', '$browser'];
   function $get(   $location,   $rootScope,   $injector,   $browser) {
+=======
+  $get.$inject = ['$location', '$rootScope', '$injector', '$browser', '$sniffer'];
+  function $get(   $location,   $rootScope,   $injector,   $browser,   $sniffer) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     var baseHref = $browser.baseHref(), location = $location.url(), lastPushedUrl;
 
@@ -396,6 +419,11 @@ function $UrlRouterProvider(   $locationProvider,   $urlMatcherFactory) {
         if (angular.isObject(isHtml5)) {
           isHtml5 = isHtml5.enabled;
         }
+<<<<<<< HEAD
+=======
+
+        isHtml5 = isHtml5 && $sniffer.history;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         
         var url = urlMatcher.format(params);
         options = options || {};

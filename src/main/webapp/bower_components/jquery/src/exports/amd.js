@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 define([
 	"../core"
 ], function( jQuery ) {
 
+=======
+define( [
+	"../core"
+], function( jQuery ) {
+
+"use strict";
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 // Register as a named AMD module, since jQuery can be concatenated with other
 // files that may use define, but not via a proper concatenation script that
 // understands anonymous AMD modules. A named AMD is safest and most robust
@@ -18,7 +27,14 @@ define([
 if ( typeof define === "function" && define.amd ) {
 	define( "jquery", [], function() {
 		return jQuery;
+<<<<<<< HEAD
 	});
 }
 
 });
+=======
+	} );
+}
+
+} );
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

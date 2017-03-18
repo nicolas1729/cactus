@@ -13,6 +13,14 @@ define(['Modernizr', 'createElement', 'docElement', 'addTest', 'getBody', 'isSVG
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
 
+<<<<<<< HEAD
+=======
+    var attachBody = function(body) {
+      if (!docElement.contains(body)) {
+        docElement.appendChild(body);
+      }
+    };
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     var removeFakeBody = function(body) {
       // If we’re rockin’ an attached fake body, clean it up
       if (body.fake && body.parentNode) {
@@ -64,11 +72,18 @@ define(['Modernizr', 'createElement', 'docElement', 'addTest', 'getBody', 'isSVG
 
       // Need to do this in the body (fake or otherwise) otherwise IE8 complains
       body.appendChild(embed);
+<<<<<<< HEAD
       docElement.appendChild(body);
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
       // Pan doesn't exist in the embed if its IE (its on the ActiveXObjeect)
       // so this check is for all other browsers.
       if (!('Pan' in embed) && !activex) {
+<<<<<<< HEAD
+=======
+        attachBody(body);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         runTest('blocked', embed);
         removeFakeBody(body);
         return;
@@ -78,6 +93,10 @@ define(['Modernizr', 'createElement', 'docElement', 'addTest', 'getBody', 'isSVG
         // if we used a fake body originally, we need to restart this test, since
         // we haven't been attached to the DOM, and therefore none of the blockers
         // have had time to work.
+<<<<<<< HEAD
+=======
+        attachBody(body);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         if (!docElement.contains(body)) {
           body = document.body || body;
           embed = createElement('embed');

@@ -3,10 +3,17 @@ var popupMask;
 var popupDialog;
 var clientId;
 var realm;
+<<<<<<< HEAD
 var oauth2KeyName;
 var redirect_uri;
 var clientSecret;
 var scopeSeparator;
+=======
+var redirect_uri;
+var clientSecret;
+var scopeSeparator;
+var additionalQueryStringParams;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 function handleLogin() {
   var scopes = [];
@@ -18,7 +25,10 @@ function handleLogin() {
     for(key in defs) {
       var auth = defs[key];
       if(auth.type === 'oauth2' && auth.scopes) {
+<<<<<<< HEAD
         oauth2KeyName = key;
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         var scope;
         if(Array.isArray(auth.scopes)) {
           // 1.2 support
@@ -30,7 +40,11 @@ function handleLogin() {
         else {
           // 2.0 support
           for(scope in auth.scopes) {
+<<<<<<< HEAD
             scopes.push({scope: scope, description: auth.scopes[scope]});
+=======
+            scopes.push({scope: scope, description: auth.scopes[scope], OAuthSchemeKey: key});
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
           }
         }
       }
@@ -60,12 +74,25 @@ function handleLogin() {
       '</div>'].join(''));
   $(document.body).append(popupDialog);
 
+<<<<<<< HEAD
   popup = popupDialog.find('ul.api-popup-scopes').empty();
   for (i = 0; i < scopes.length; i ++) {
     scope = scopes[i];
     str = '<li><input type="checkbox" id="scope_' + i + '" scope="' + scope.scope + '"/>' + '<label for="scope_' + i + '">' + scope.scope;
     if (scope.description) {
       str += '<br/><span class="api-scope-desc">' + scope.description + '</span>';
+=======
+  //TODO: only display applicable scopes (will need to pass them into handleLogin)
+  popup = popupDialog.find('ul.api-popup-scopes').empty();
+  for (i = 0; i < scopes.length; i ++) {
+    scope = scopes[i];
+    str = '<li><input type="checkbox" id="scope_' + i + '" scope="' + scope.scope + '"' +'" oauthtype="' + scope.OAuthSchemeKey +'"/>' + '<label for="scope_' + i + '">' + scope.scope ;
+    if (scope.description) {
+      if ($.map(auths, function(n, i) { return i; }).length > 1) //if we have more than one scheme, display schemes
+	    str += '<br/><span class="api-scope-desc">' + scope.description + ' ('+ scope.OAuthSchemeKey+')' +'</span>';
+	  else
+	    str += '<br/><span class="api-scope-desc">' + scope.description + '</span>';
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     }
     str += '</label></li>';
     popup.append(str);
@@ -103,9 +130,31 @@ function handleLogin() {
     var defaultRedirectUrl = host.protocol + '//' + host.host + pathname + '/o2c.html';
     var redirectUrl = window.oAuthRedirectUrl || defaultRedirectUrl;
     var url = null;
+<<<<<<< HEAD
 
     for (var key in authSchemes) {
       if (authSchemes.hasOwnProperty(key)) {
+=======
+    var scopes = []
+    var o = popup.find('input:checked'); 
+    var OAuthSchemeKeys = [];
+    var state;
+    for(k =0; k < o.length; k++) {
+      var scope = $(o[k]).attr('scope');
+      if (scopes.indexOf(scope) === -1)
+        scopes.push(scope);
+      var OAuthSchemeKey = $(o[k]).attr('oauthtype');      
+      if (OAuthSchemeKeys.indexOf(OAuthSchemeKey) === -1)
+          OAuthSchemeKeys.push(OAuthSchemeKey);
+    }
+    
+    //TODO: merge not replace if scheme is different from any existing 
+    //(needs to be aware of schemes to do so correctly)
+    window.enabledScopes=scopes;    
+    
+    for (var key in authSchemes) { 
+      if (authSchemes.hasOwnProperty(key) && OAuthSchemeKeys.indexOf(key) != -1) { //only look at keys that match this scope.
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         var flow = authSchemes[key].flow;
 
         if(authSchemes[key].type === 'oauth2' && flow && (flow === 'implicit' || flow === 'accessCode')) {
@@ -113,7 +162,18 @@ function handleLogin() {
           url = dets.authorizationUrl + '?response_type=' + (flow === 'implicit' ? 'token' : 'code');
           window.swaggerUi.tokenName = dets.tokenName || 'access_token';
           window.swaggerUi.tokenUrl = (flow === 'accessCode' ? dets.tokenUrl : null);
+<<<<<<< HEAD
         }
+=======
+          state = key;
+        }
+        else if(authSchemes[key].type === 'oauth2' && flow && (flow === 'application')) {
+            var dets = authSchemes[key];
+            window.swaggerUi.tokenName = dets.tokenName || 'access_token';
+            clientCredentialsFlow(scopes, dets.tokenUrl, key);
+            return;
+        }        
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         else if(authSchemes[key].grantTypes) {
           // 1.2 support
           var o = authSchemes[key].grantTypes;
@@ -134,6 +194,7 @@ function handleLogin() {
         }
       }
     }
+<<<<<<< HEAD
     var scopes = []
     var o = $('.api-popup-scopes').find('input:checked');
 
@@ -148,6 +209,8 @@ function handleLogin() {
     var state = Math.random ();
 
     window.enabledScopes=scopes;
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     redirect_uri = redirectUrl;
 
@@ -156,6 +219,12 @@ function handleLogin() {
     url += '&client_id=' + encodeURIComponent(clientId);
     url += '&scope=' + encodeURIComponent(scopes.join(scopeSeparator));
     url += '&state=' + encodeURIComponent(state);
+<<<<<<< HEAD
+=======
+    for (var key in additionalQueryStringParams) {
+        url += '&' + key + '=' + encodeURIComponent(additionalQueryStringParams[key]);
+    }
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     window.open(url);
   });
@@ -187,9 +256,16 @@ function initOAuth(opts) {
   popupMask = (o.popupMask||$('#api-common-mask'));
   popupDialog = (o.popupDialog||$('.api-popup-dialog'));
   clientId = (o.clientId||errors.push('missing client id'));
+<<<<<<< HEAD
   clientSecret = (o.clientSecret||errors.push('missing client secret'));
   realm = (o.realm||errors.push('missing realm'));
   scopeSeparator = (o.scopeSeparator||' ');
+=======
+  clientSecret = (o.clientSecret||null);
+  realm = (o.realm||errors.push('missing realm'));
+  scopeSeparator = (o.scopeSeparator||' ');
+  additionalQueryStringParams = (o.additionalQueryStringParams||{});
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
   if(errors.length > 0){
     log('auth unable initialize oauth: ' + errors);
@@ -208,6 +284,7 @@ function initOAuth(opts) {
   });
 }
 
+<<<<<<< HEAD
 window.processOAuthCode = function processOAuthCode(data) {
   var params = {
     'client_id': clientId,
@@ -216,6 +293,53 @@ window.processOAuthCode = function processOAuthCode(data) {
     'grant_type': 'authorization_code',
     'redirect_uri': redirect_uri
   }
+=======
+function clientCredentialsFlow(scopes, tokenUrl, OAuthSchemeKey) {
+    var params = {
+      'client_id': clientId,
+      'client_secret': clientSecret,
+      'scope': scopes.join(' '),
+      'grant_type': 'client_credentials'
+    }
+    $.ajax(
+    {
+      url : tokenUrl,
+      type: "POST",
+      data: params,
+      success:function(data, textStatus, jqXHR)
+      {
+        onOAuthComplete(data,OAuthSchemeKey);
+      },
+      error: function(jqXHR, textStatus, errorThrown)
+      {
+        onOAuthComplete("");
+      }
+    });
+    
+  }
+
+window.processOAuthCode = function processOAuthCode(data) {
+  var OAuthSchemeKey = data.state;
+
+  // redirect_uri is required in auth code flow 
+  // see https://tools.ietf.org/html/draft-ietf-oauth-v2-31#section-4.1.3
+  var host = window.location;
+  var pathname = location.pathname.substring(0, location.pathname.lastIndexOf("/"));
+  var defaultRedirectUrl = host.protocol + '//' + host.host + pathname + '/o2c.html';
+  var redirectUrl = window.oAuthRedirectUrl || defaultRedirectUrl;
+
+  var params = {
+    'client_id': clientId,
+    'code': data.code,
+    'grant_type': 'authorization_code',
+    'redirect_uri': redirectUrl
+  };
+
+  if (clientSecret) {
+    params.client_secret = clientSecret;
+  }
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   $.ajax(
   {
     url : window.swaggerUi.tokenUrl,
@@ -223,16 +347,26 @@ window.processOAuthCode = function processOAuthCode(data) {
     data: params,
     success:function(data, textStatus, jqXHR)
     {
+<<<<<<< HEAD
       onOAuthComplete(data);
+=======
+      onOAuthComplete(data, OAuthSchemeKey);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     },
     error: function(jqXHR, textStatus, errorThrown)
     {
       onOAuthComplete("");
     }
   });
+<<<<<<< HEAD
 }
 
 window.onOAuthComplete = function onOAuthComplete(token) {
+=======
+};
+
+window.onOAuthComplete = function onOAuthComplete(token,OAuthSchemeKey) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   if(token) {
     if(token.error) {
       var checkbox = $('input[type=checkbox],.secured')
@@ -242,11 +376,22 @@ window.onOAuthComplete = function onOAuthComplete(token) {
       alert(token.error);
     }
     else {
+<<<<<<< HEAD
       var b = token[window.swaggerUi.tokenName];
       if(b){
         // if all roles are satisfied
         var o = null;
         $.each($('.auth .api-ic .api_information_panel'), function(k, v) {
+=======
+      var b = token[window.swaggerUi.tokenName];      
+      if (!OAuthSchemeKey){
+          OAuthSchemeKey = token.state;
+      }
+      if(b){
+        // if all roles are satisfied
+        var o = null;
+        $.each($('.auth .api-ic .api_information_panel'), function(k, v) { 
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
           var children = v;
           if(children && children.childNodes) {
             var requiredScopes = [];
@@ -283,8 +428,17 @@ window.onOAuthComplete = function onOAuthComplete(token) {
             }
           }
         });
+<<<<<<< HEAD
         window.swaggerUi.api.clientAuthorizations.add(oauth2KeyName, new SwaggerClient.ApiKeyAuthorization('Authorization', 'Bearer ' + b, 'header'));
       }
     }
   }
 }
+=======
+        window.swaggerUi.api.clientAuthorizations.add(window.OAuthSchemeKey, new SwaggerClient.ApiKeyAuthorization('Authorization', 'Bearer ' + b, 'header'));
+        window.swaggerUi.load();
+      }
+    }
+  }
+};
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

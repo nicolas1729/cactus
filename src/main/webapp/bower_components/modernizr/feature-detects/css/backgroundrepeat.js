@@ -7,6 +7,7 @@
   "authors": ["Ryan Seddon"],
   "notes": [{
     "name": "MDN Docs",
+<<<<<<< HEAD
     "href": "http://developer.mozilla.org/en/CSS/background-repeat"
   }, {
     "name": "Test Page",
@@ -14,6 +15,15 @@
   }, {
     "name": "Demo",
     "href": "http://jsfiddle.net/ryanseddon/yMLTQ/6/"
+=======
+    "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"
+  }, {
+    "name": "Test Page",
+    "href": "https://jsbin.com/uzesun/"
+  }, {
+    "name": "Demo",
+    "href": "https://jsfiddle.net/ryanseddon/yMLTQ/6/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

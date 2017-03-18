@@ -8,7 +8,11 @@
   "authors": ["Cătălin Mariș"],
   "notes": [{
     "name": "WHATWG Specification",
+<<<<<<< HEAD
     "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-style-scoped"
+=======
+    "href": "https://html.spec.whatwg.org/multipage/semantics.html#attr-style-scoped"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "polyfills": ["scoped-styles"]
 }

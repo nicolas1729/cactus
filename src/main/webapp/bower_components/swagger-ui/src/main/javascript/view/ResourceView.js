@@ -34,6 +34,10 @@ SwaggerUi.Views.ResourceView = Backbone.View.extend({
 
       operation.nickname = id;
       operation.parentId = this.model.id;
+<<<<<<< HEAD
+=======
+      operation.definitions = this.model.definitions; // make Json Schema available for JSonEditor in this operation
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       this.addOperation(operation);
     }
 

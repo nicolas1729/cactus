@@ -11,24 +11,77 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+<<<<<<< HEAD
 spring:
+=======
+management:
+    context-path: /management
+    health:
+        mail:
+            enabled: false # When using the MailService, configure an SMTP server and set this to true
+spring:
+    application:
+        name: cactus
+    profiles:
+        # The commented value for `active` can be replaced with valid spring profiles to load.
+        # Otherwise, it will be filled in by maven when building the WAR file
+        # Either way, it can be overridden by `--spring.profiles.active` value passed in the commandline or `-Dspring.profiles.active` set in `JAVA_OPTS`
+        active: #spring.profiles.active#
+    jackson:
+        serialization.write_dates_as_timestamps: false
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     jpa:
         open-in-view: false
         hibernate:
             ddl-auto: none
+<<<<<<< HEAD
             naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
     messages:
         basename: classpath:/i18n/messages
+=======
+            naming:
+                strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+    messages:
+        basename: i18n/messages
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     mvc:
         favicon:
             enabled: false
     thymeleaf:
         mode: XHTML
+<<<<<<< HEAD
+=======
+    social:
+        # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
+        google:
+            clientId: xxx
+            clientSecret: xxx
+
+        # see https://developers.facebook.com/docs/facebook-login/v2.2
+        facebook:
+            clientId: xxx
+            clientSecret: xxx
+
+        # see https://apps.twitter.com/app/
+        twitter:
+            clientId: xxx
+            clientSecret: xxx
+
+        # jhipster-needle-add-social-configuration
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 security:
     basic:
         enabled: false
 
+<<<<<<< HEAD
+=======
+server:
+    session:
+        cookie:
+            http-only: true
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 # ===================================================================
 # JHipster specific properties
 # ===================================================================
@@ -46,16 +99,33 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
+<<<<<<< HEAD
         from: cactus.activation@gmail.com
     security:
         rememberme:
             # security key (this key should be unique for your application, and kept secret)
             key: a9f774f88ef7f2457e626d008f20a073e8ddbd91
+=======
+        from: cactus@localhost
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     swagger:
         title: cactus API
         description: cactus API documentation
         version: 0.0.1
         termsOfServiceUrl:
+<<<<<<< HEAD
         contact:
         license:
         licenseUrl:
+=======
+        contactName:
+        contactUrl:
+        contactEmail:
+        license:
+        licenseUrl:
+    social:
+        redirectAfterSignIn: "/#/home"
+    ribbon:
+        # comma separated list of profiles to show a ribbon on the GUI
+        displayOnActiveProfiles: dev
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

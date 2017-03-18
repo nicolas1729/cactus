@@ -11,9 +11,15 @@ describe('html5shiv', function() {
 
     $iframe
       .css({
+<<<<<<< HEAD
         'height':10,
         'width':10,
         'position':'absolute',
+=======
+        'height': 10,
+        'width': 10,
+        'position': 'absolute',
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         'top': 0,
         'left': 0
       })

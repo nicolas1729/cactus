@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 <div>
 <ul class="signature-nav">
   <li><a class="description-link" href="#" data-sw-translate>Model</a></li>
   <li><a class="snippet-link" href="#" data-sw-translate>Model Schema</a></li>
+=======
+{{#ifCond sampleJSON "||" sampleXML}}
+
+<div>
+<ul class="signature-nav">
+  <li><a class="description-link" href="#" data-sw-translate>Model</a></li>
+  <li><a class="snippet-link" href="#" data-sw-translate>Example Value</a></li>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 </ul>
 <div>
 
@@ -11,8 +20,28 @@
   </div>
 
   <div class="snippet">
+<<<<<<< HEAD
     <pre><code>{{sampleJSON}}</code></pre>
     <small class="notice"></small>
   </div>
 </div>
 
+=======
+  {{#if sampleJSON}}
+      <div class="snippet_json">
+        <pre><code>{{sampleJSON}}</code></pre>
+        {{#if isParam}}<small class="notice" data-sw-translate></small>{{/if}}
+      </div>
+  {{/if}}
+  {{#if sampleXML}}
+    <div class="snippet_xml">
+      <pre><code>{{sampleXML}}</code></pre>
+      {{#if isParam}}<small class="notice" data-sw-translate></small>{{/if}}
+    </div>
+  {{/if}}
+  </div>
+</div>
+{{else}}
+    {{signature}}
+{{/ifCond}}
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

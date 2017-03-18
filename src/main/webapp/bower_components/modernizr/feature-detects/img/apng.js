@@ -7,7 +7,11 @@
   "builderAliases": ["img_apng"],
   "notes": [{
     "name": "Wikipedia Article",
+<<<<<<< HEAD
     "href": "http://en.wikipedia.org/wiki/APNG"
+=======
+    "href": "https://en.wikipedia.org/wiki/APNG"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

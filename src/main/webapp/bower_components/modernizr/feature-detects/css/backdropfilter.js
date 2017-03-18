@@ -7,7 +7,11 @@
   "notes": [
     {
       "name": "W3C Editor’s Draft specification",
+<<<<<<< HEAD
       "href": "http://dev.w3.org/fxtf/filters-2/#BackdropFilterProperty"
+=======
+      "href": "https://drafts.fxtf.org/filters-2/#BackdropFilterProperty"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     },
     {
       "name": "Caniuse for CSS Backdrop Filter",

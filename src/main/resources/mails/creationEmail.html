@@ -8,8 +8,13 @@
         <p th:text="#{email.activation.greeting(${user.login})}">
             Dear
         </p>
+<<<<<<< HEAD
         <p th:text="#{email.activation.text1}">
             Your JHipster account has been created, please click on the URL below to activate it:
+=======
+        <p th:text="#{email.creation.text1}">
+            Your JHipster account has been created, please click on the URL below to access it:
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         </p>
         <p>
           <a th:href="@{|${baseUrl}/#/reset/finish?key=${user.resetKey}|}"

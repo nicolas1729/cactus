@@ -194,7 +194,10 @@ angular.module('cfp.loadingBar', [])
           $animate = $injector.get('$animate');
         }
 
+<<<<<<< HEAD
         var $parent = $document.find($parentSelector).eq(0);
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         $timeout.cancel(completeTimeout);
 
         // do not continually broadcast the started event:
@@ -202,15 +205,39 @@ angular.module('cfp.loadingBar', [])
           return;
         }
 
+<<<<<<< HEAD
+=======
+        var document = $document[0];
+        var parent = document.querySelector ?
+          document.querySelector($parentSelector)
+          : $document.find($parentSelector)[0]
+        ;
+
+        if (! parent) {
+          parent = document.getElementsByTagName('body')[0];
+        }
+
+        var $parent = angular.element(parent);
+        var $after = parent.lastChild && angular.element(parent.lastChild);
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         $rootScope.$broadcast('cfpLoadingBar:started');
         started = true;
 
         if (includeBar) {
+<<<<<<< HEAD
           $animate.enter(loadingBarContainer, $parent, angular.element($parent[0].lastChild));
         }
 
         if (includeSpinner) {
           $animate.enter(spinner, $parent, angular.element($parent[0].lastChild));
+=======
+          $animate.enter(loadingBarContainer, $parent, $after);
+        }
+
+        if (includeSpinner) {
+          $animate.enter(spinner, $parent, loadingBarContainer);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         }
 
         _set(startSize);

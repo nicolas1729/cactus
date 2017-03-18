@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
     "relationships": [],
     "fields": [
         {
             "fieldId": 1,
+=======
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "nom",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -10,12 +17,18 @@
             ]
         },
         {
+<<<<<<< HEAD
             "fieldId": 2,
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "description",
             "fieldType": "String"
         },
         {
+<<<<<<< HEAD
             "fieldId": 3,
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "prodeau",
             "fieldType": "Integer",
             "fieldValidateRules": [
@@ -23,7 +36,10 @@
             ]
         },
         {
+<<<<<<< HEAD
             "fieldId": 4,
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "prodnour",
             "fieldType": "Integer",
             "fieldValidateRules": [
@@ -31,7 +47,16 @@
             ]
         }
     ],
+<<<<<<< HEAD
     "dto": "no",
     "service": "no",
     "pagination": "no"
 }
+=======
+    "changelogDate": "20161204165648",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "terrain",
+    "pagination": "no"
+}
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

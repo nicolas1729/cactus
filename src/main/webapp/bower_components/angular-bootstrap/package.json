@@ -1,6 +1,10 @@
 {
   "name": "angular-ui-bootstrap",
+<<<<<<< HEAD
   "version": "0.14.3",
+=======
+  "version": "1.3.3",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   "description": "Bootstrap widgets for Angular",
   "main": "index.js",
   "homepage": "http://angular-ui.github.io/bootstrap/",
@@ -17,7 +21,11 @@
   ],
   "author": "https://github.com/angular-ui/bootstrap/graphs/contributors",
   "peerDependencies": {
+<<<<<<< HEAD
     "angular": "^1.3.x || >= 1.4.0-beta.0 || >= 1.5.0-beta.0"
+=======
+    "angular": ">= 1.4.0-beta.0 || >= 1.5.0-beta.0"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },
   "license": "MIT"
 }

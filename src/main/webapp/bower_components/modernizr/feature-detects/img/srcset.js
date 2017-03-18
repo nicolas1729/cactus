@@ -5,10 +5,17 @@
   "tags": ["image"],
   "notes": [{
     "name": "Smashing Magazine Article",
+<<<<<<< HEAD
     "href": "http://en.wikipedia.org/wiki/APNG"
     },{
     "name": "Generate multi-resolution images for srcset with Grunt",
     "href": "http://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/"
+=======
+    "href": "https://en.wikipedia.org/wiki/APNG"
+    },{
+    "name": "Generate multi-resolution images for srcset with Grunt",
+    "href": "https://addyosmani.com/blog/generate-multi-resolution-images-for-srcset-with-grunt/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     }]
 }
 !*/

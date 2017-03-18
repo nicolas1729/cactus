@@ -5,7 +5,11 @@
   "caniuse": "contenteditable",
   "notes": [{
     "name": "WHATWG spec",
+<<<<<<< HEAD
     "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/editing.html#contenteditable"
+=======
+    "href": "https://html.spec.whatwg.org/multipage/interaction.html#contenteditable"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

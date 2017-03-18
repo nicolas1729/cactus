@@ -38,8 +38,14 @@
     "tag": "v0.3.1",
     "commit": "4fc06c707a0cbde72de103e60cddab23f7885508"
   },
+<<<<<<< HEAD
   "_source": "git://github.com/SlexAxton/messageformat.js.git",
   "_target": "^0.3.1",
   "_originalSource": "messageformat",
   "_direct": true
+=======
+  "_source": "https://github.com/SlexAxton/messageformat.js.git",
+  "_target": "0.3.1",
+  "_originalSource": "messageformat"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 }

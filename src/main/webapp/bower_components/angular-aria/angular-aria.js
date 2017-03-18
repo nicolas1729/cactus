@@ -1,9 +1,17 @@
 /**
+<<<<<<< HEAD
  * @license AngularJS v1.4.8
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
 (function(window, angular, undefined) {'use strict';
+=======
+ * @license AngularJS v1.5.8
+ * (c) 2010-2016 Google, Inc. http://angularjs.org
+ * License: MIT
+ */
+(function(window, angular) {'use strict';
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 /**
  * @ngdoc module
@@ -21,24 +29,46 @@
  *
  * For ngAria to do its magic, simply include the module `ngAria` as a dependency. The following
  * directives are supported:
+<<<<<<< HEAD
  * `ngModel`, `ngDisabled`, `ngShow`, `ngHide`, `ngClick`, `ngDblClick`, and `ngMessages`.
+=======
+ * `ngModel`, `ngChecked`, `ngReadonly`, `ngRequired`, `ngValue`, `ngDisabled`, `ngShow`, `ngHide`, `ngClick`,
+ * `ngDblClick`, and `ngMessages`.
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  *
  * Below is a more detailed breakdown of the attributes handled by ngAria:
  *
  * | Directive                                   | Supported Attributes                                                                   |
  * |---------------------------------------------|----------------------------------------------------------------------------------------|
+<<<<<<< HEAD
  * | {@link ng.directive:ngDisabled ngDisabled}  | aria-disabled                                                                          |
+=======
+ * | {@link ng.directive:ngModel ngModel}        | aria-checked, aria-valuemin, aria-valuemax, aria-valuenow, aria-invalid, aria-required, input roles |
+ * | {@link ng.directive:ngDisabled ngDisabled}  | aria-disabled                                                                          |
+ * | {@link ng.directive:ngRequired ngRequired}  | aria-required
+ * | {@link ng.directive:ngChecked ngChecked}    | aria-checked
+ * | {@link ng.directive:ngReadonly ngReadonly}  | aria-readonly                                                                          |
+ * | {@link ng.directive:ngValue ngValue}        | aria-checked                                                                           |
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  * | {@link ng.directive:ngShow ngShow}          | aria-hidden                                                                            |
  * | {@link ng.directive:ngHide ngHide}          | aria-hidden                                                                            |
  * | {@link ng.directive:ngDblclick ngDblclick}  | tabindex                                                                               |
  * | {@link module:ngMessages ngMessages}        | aria-live                                                                              |
+<<<<<<< HEAD
  * | {@link ng.directive:ngModel ngModel}        | aria-checked, aria-valuemin, aria-valuemax, aria-valuenow, aria-invalid, aria-required, input roles |
  * | {@link ng.directive:ngClick ngClick}        | tabindex, keypress event, button role                                                               |
+=======
+ * | {@link ng.directive:ngClick ngClick}        | tabindex, keypress event, button role                                                  |
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  *
  * Find out more information about each directive by reading the
  * {@link guide/accessibility ngAria Developer Guide}.
  *
+<<<<<<< HEAD
  * ##Example
+=======
+ * ## Example
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  * Using ngDisabled with ngAria:
  * ```html
  * <md-checkbox ng-disabled="disabled">
@@ -48,7 +78,11 @@
  * <md-checkbox ng-disabled="disabled" aria-disabled="true">
  * ```
  *
+<<<<<<< HEAD
  * ##Disabling Attributes
+=======
+ * ## Disabling Attributes
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  * It's possible to disable individual attributes added by ngAria with the
  * {@link ngAria.$ariaProvider#config config} method. For more details, see the
  * {@link guide/accessibility Developer Guide}.
@@ -92,10 +126,17 @@ function $AriaProvider() {
   var config = {
     ariaHidden: true,
     ariaChecked: true,
+<<<<<<< HEAD
     ariaDisabled: true,
     ariaRequired: true,
     ariaInvalid: true,
     ariaMultiline: true,
+=======
+    ariaReadonly: true,
+    ariaDisabled: true,
+    ariaRequired: true,
+    ariaInvalid: true,
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     ariaValue: true,
     tabindex: true,
     bindKeypress: true,
@@ -110,6 +151,7 @@ function $AriaProvider() {
    *
    *  - **ariaHidden** – `{boolean}` – Enables/disables aria-hidden tags
    *  - **ariaChecked** – `{boolean}` – Enables/disables aria-checked tags
+<<<<<<< HEAD
    *  - **ariaDisabled** – `{boolean}` – Enables/disables aria-disabled tags
    *  - **ariaRequired** – `{boolean}` – Enables/disables aria-required tags
    *  - **ariaInvalid** – `{boolean}` – Enables/disables aria-invalid tags
@@ -118,6 +160,16 @@ function $AriaProvider() {
    *  - **tabindex** – `{boolean}` – Enables/disables tabindex tags
    *  - **bindKeypress** – `{boolean}` – Enables/disables keypress event binding on `&lt;div&gt;` and
    *    `&lt;li&gt;` elements with ng-click
+=======
+   *  - **ariaReadonly** – `{boolean}` – Enables/disables aria-readonly tags
+   *  - **ariaDisabled** – `{boolean}` – Enables/disables aria-disabled tags
+   *  - **ariaRequired** – `{boolean}` – Enables/disables aria-required tags
+   *  - **ariaInvalid** – `{boolean}` – Enables/disables aria-invalid tags
+   *  - **ariaValue** – `{boolean}` – Enables/disables aria-valuemin, aria-valuemax and aria-valuenow tags
+   *  - **tabindex** – `{boolean}` – Enables/disables tabindex tags
+   *  - **bindKeypress** – `{boolean}` – Enables/disables keypress event binding on `div` and
+   *    `li` elements with ng-click
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    *  - **bindRoleForClick** – `{boolean}` – Adds role=button to non-interactive elements like `div`
    *    using ng-click, making them more accessible to users of assistive technologies
    *
@@ -156,15 +208,26 @@ function $AriaProvider() {
    *
    *```js
    * ngAriaModule.directive('ngDisabled', ['$aria', function($aria) {
+<<<<<<< HEAD
    *   return $aria.$$watchExpr('ngDisabled', 'aria-disabled');
+=======
+   *   return $aria.$$watchExpr('ngDisabled', 'aria-disabled', nodeBlackList, false);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * }])
    *```
    * Shown above, the ngAria module creates a directive with the same signature as the
    * traditional `ng-disabled` directive. But this ngAria version is dedicated to
+<<<<<<< HEAD
    * solely managing accessibility attributes. The internal `$aria` service is used to watch the
    * boolean attribute `ngDisabled`. If it has not been explicitly set by the developer,
    * `aria-disabled` is injected as an attribute with its value synchronized to the value in
    * `ngDisabled`.
+=======
+   * solely managing accessibility attributes on custom elements. The internal `$aria` service is
+   * used to watch the boolean attribute `ngDisabled`. If it has not been explicitly set by the
+   * developer, `aria-disabled` is injected as an attribute with its value synchronized to the
+   * value in `ngDisabled`.
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    *
    * Because ngAria hooks into the `ng-disabled` directive, developers do not have to do
    * anything to enable this feature. The `aria-disabled` attribute is automatically managed
@@ -172,12 +235,23 @@ function $AriaProvider() {
    *
    * The full list of directives that interface with ngAria:
    * * **ngModel**
+<<<<<<< HEAD
+=======
+   * * **ngChecked**
+   * * **ngReadonly**
+   * * **ngRequired**
+   * * **ngDisabled**
+   * * **ngValue**
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * * **ngShow**
    * * **ngHide**
    * * **ngClick**
    * * **ngDblclick**
    * * **ngMessages**
+<<<<<<< HEAD
    * * **ngDisabled**
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    *
    * Read the {@link guide/accessibility ngAria Developer Guide} for a thorough explanation of each
    * directive.
@@ -203,6 +277,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 .directive('ngHide', ['$aria', function($aria) {
   return $aria.$$watchExpr('ngHide', 'aria-hidden', [], false);
 }])
+<<<<<<< HEAD
 .directive('ngModel', ['$aria', function($aria) {
 
   function shouldAttachAttr(attr, normalizedAttr, elem) {
@@ -210,6 +285,30 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
   }
 
   function shouldAttachRole(role, elem) {
+=======
+.directive('ngValue', ['$aria', function($aria) {
+  return $aria.$$watchExpr('ngValue', 'aria-checked', nodeBlackList, false);
+}])
+.directive('ngChecked', ['$aria', function($aria) {
+  return $aria.$$watchExpr('ngChecked', 'aria-checked', nodeBlackList, false);
+}])
+.directive('ngReadonly', ['$aria', function($aria) {
+  return $aria.$$watchExpr('ngReadonly', 'aria-readonly', nodeBlackList, false);
+}])
+.directive('ngRequired', ['$aria', function($aria) {
+  return $aria.$$watchExpr('ngRequired', 'aria-required', nodeBlackList, false);
+}])
+.directive('ngModel', ['$aria', function($aria) {
+
+  function shouldAttachAttr(attr, normalizedAttr, elem, allowBlacklistEls) {
+    return $aria.config(normalizedAttr) && !elem.attr(attr) && (allowBlacklistEls || !isNodeOneOf(elem, nodeBlackList));
+  }
+
+  function shouldAttachRole(role, elem) {
+    // if element does not have role attribute
+    // AND element type is equal to role (if custom element has a type equaling shape) <-- remove?
+    // AND element is not INPUT
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     return !elem.attr('role') && (elem.attr('type') === role) && (elem[0].nodeName !== 'INPUT');
   }
 
@@ -219,20 +318,32 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
     return ((type || role) === 'checkbox' || role === 'menuitemcheckbox') ? 'checkbox' :
            ((type || role) === 'radio'    || role === 'menuitemradio') ? 'radio' :
+<<<<<<< HEAD
            (type === 'range'              || role === 'progressbar' || role === 'slider') ? 'range' :
            (type || role) === 'textbox'   || elem[0].nodeName === 'TEXTAREA' ? 'multiline' : '';
+=======
+           (type === 'range'              || role === 'progressbar' || role === 'slider') ? 'range' : '';
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }
 
   return {
     restrict: 'A',
+<<<<<<< HEAD
     require: '?ngModel',
+=======
+    require: 'ngModel',
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     priority: 200, //Make sure watches are fired after any other directives that affect the ngModel value
     compile: function(elem, attr) {
       var shape = getShape(attr, elem);
 
       return {
         pre: function(scope, elem, attr, ngModel) {
+<<<<<<< HEAD
           if (shape === 'checkbox' && attr.type !== 'checkbox') {
+=======
+          if (shape === 'checkbox') {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             //Use the input[checkbox] $isEmpty implementation for elements with checkbox roles
             ngModel.$isEmpty = function(value) {
               return value === false;
@@ -240,13 +351,18 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
           }
         },
         post: function(scope, elem, attr, ngModel) {
+<<<<<<< HEAD
           var needsTabIndex = shouldAttachAttr('tabindex', 'tabindex', elem)
                                 && !isNodeOneOf(elem, nodeBlackList);
+=======
+          var needsTabIndex = shouldAttachAttr('tabindex', 'tabindex', elem, false);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
           function ngAriaWatchModelValue() {
             return ngModel.$modelValue;
           }
 
+<<<<<<< HEAD
           function getRadioReaction() {
             if (needsTabIndex) {
               needsTabIndex = false;
@@ -263,6 +379,14 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
           }
 
           function ngAriaCheckboxReaction() {
+=======
+          function getRadioReaction(newVal) {
+            var boolVal = (attr.value == ngModel.$viewValue);
+            elem.attr('aria-checked', boolVal);
+          }
+
+          function getCheckboxReaction() {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             elem.attr('aria-checked', !ngModel.$isEmpty(ngModel.$viewValue));
           }
 
@@ -272,9 +396,15 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
               if (shouldAttachRole(shape, elem)) {
                 elem.attr('role', shape);
               }
+<<<<<<< HEAD
               if (shouldAttachAttr('aria-checked', 'ariaChecked', elem)) {
                 scope.$watch(ngAriaWatchModelValue, shape === 'radio' ?
                     getRadioReaction() : ngAriaCheckboxReaction);
+=======
+              if (shouldAttachAttr('aria-checked', 'ariaChecked', elem, false)) {
+                scope.$watch(ngAriaWatchModelValue, shape === 'radio' ?
+                    getRadioReaction : getCheckboxReaction);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
               }
               if (needsTabIndex) {
                 elem.attr('tabindex', 0);
@@ -311,6 +441,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
                 elem.attr('tabindex', 0);
               }
               break;
+<<<<<<< HEAD
             case 'multiline':
               if (shouldAttachAttr('aria-multiline', 'ariaMultiline', elem)) {
                 elem.attr('aria-multiline', true);
@@ -327,6 +458,19 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
           }
 
           if (shouldAttachAttr('aria-invalid', 'ariaInvalid', elem)) {
+=======
+          }
+
+          if (!attr.hasOwnProperty('ngRequired') && ngModel.$validators.required
+            && shouldAttachAttr('aria-required', 'ariaRequired', elem, false)) {
+            // ngModel.$error.required is undefined on custom controls
+            attr.$observe('required', function() {
+              elem.attr('aria-required', !!attr['required']);
+            });
+          }
+
+          if (shouldAttachAttr('aria-invalid', 'ariaInvalid', elem, true)) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             scope.$watch(function ngAriaInvalidWatch() {
               return ngModel.$invalid;
             }, function ngAriaInvalidReaction(newVal) {
@@ -339,7 +483,11 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
   };
 }])
 .directive('ngDisabled', ['$aria', function($aria) {
+<<<<<<< HEAD
   return $aria.$$watchExpr('ngDisabled', 'aria-disabled', []);
+=======
+  return $aria.$$watchExpr('ngDisabled', 'aria-disabled', nodeBlackList, false);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 }])
 .directive('ngMessages', function() {
   return {

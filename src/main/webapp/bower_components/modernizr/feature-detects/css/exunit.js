@@ -6,7 +6,11 @@
   "tags": ["css"],
   "notes": [{
     "name": "W3C Spec",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/css3-values/#font-relative-lengths"
+=======
+    "href": "https://www.w3.org/TR/css3-values/#font-relative-lengths"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

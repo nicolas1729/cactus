@@ -6,7 +6,11 @@
   "authors": ["Mike Taylor"],
   "notes": [{
     "name": "WHATWG spec",
+<<<<<<< HEAD
     "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary"
+=======
+    "href": "https://html.spec.whatwg.org/multipage/forms.html#input-type-attr-summary"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "knownBugs": ["Some blackberry devices report false positive for input.multiple"]
 }
@@ -40,7 +44,11 @@ define(['Modernizr', 'createElement', 'inputElem'], function(Modernizr, createEl
   var inputattrs = 'autocomplete autofocus list placeholder max min multiple pattern required step'.split(' ');
   var attrs = {};
 
+<<<<<<< HEAD
   Modernizr['input'] = (function(props) {
+=======
+  Modernizr.input = (function(props) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     for (var i = 0, len = props.length; i < len; i++) {
       attrs[ props[i] ] = !!(props[i] in inputElem);
     }

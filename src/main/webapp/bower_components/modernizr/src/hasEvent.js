@@ -8,8 +8,13 @@ define(['ModernizrProto', 'createElement'], function(ModernizrProto, createEleme
    * @optionProp hasEvent
    * @access public
    * @function hasEvent
+<<<<<<< HEAD
    * @param  {string|*}       eventName  is the name of an event to test for (e.g. "resize")
    * @param  {Element|string} [element=HTMLDivElement] is the element|document|window|tagName to test on
+=======
+   * @param  {string|*} eventName - the name of an event to test for (e.g. "resize")
+   * @param  {Element|string} [element=HTMLDivElement] - is the element|document|window|tagName to test on
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * @returns {boolean}
    * @example
    *  `Modernizr.hasEvent` lets you determine if the browser supports a supplied event.
@@ -28,7 +33,11 @@ define(['ModernizrProto', 'createElement'], function(ModernizrProto, createEleme
    *
    */
 
+<<<<<<< HEAD
   var hasEvent = (function(undefined) {
+=======
+  var hasEvent = (function() {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     // Detect whether event support can be detected via `in`. Test on a DOM element
     // using the "blur" event b/c it should always exist. bit.ly/event-detection

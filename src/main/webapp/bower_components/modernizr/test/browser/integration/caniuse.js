@@ -79,7 +79,11 @@ window.caniusecb = function(caniuse) {
       localstorage: 'namevalue-storage',
       mathml: 'mathml',
       mediaqueries: 'css-mediaqueries',
+<<<<<<< HEAD
       meter: 'progressmeter',
+=======
+      meter: 'progress',
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       multiplebgs: 'multibackgrounds',
       mutationobserver: 'mutationobserver',
       notification: 'notifications',
@@ -89,7 +93,11 @@ window.caniusecb = function(caniuse) {
       performance: 'nav-timing',
       picture: 'picture',
       postmessage: 'x-doc-messaging',
+<<<<<<< HEAD
       progressbar: 'progressmeter',
+=======
+      progressbar: 'progress',
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       promises: 'promises',
       queryselector: 'queryselector',
       regions: 'css-regions',
@@ -158,7 +166,11 @@ window.caniusecb = function(caniuse) {
       **************************************************************/
 
       // caniuse says audio/video are yes/no, Modernizr has more detail which we'll dumb down.
+<<<<<<< HEAD
       if (_.contains(['video', 'audio', 'webglextensions'], o.feature)) {
+=======
+      if (_.includes(['video', 'audio', 'webglextensions'], o.feature)) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         o.result = o.result.valueOf();
       }
 
@@ -255,7 +267,11 @@ window.caniusecb = function(caniuse) {
       }
 
       // caniuse bundles progress and meter elements, so we do too.
+<<<<<<< HEAD
       if (_.contains(['meter', 'progressbar'], o.feature)) {
+=======
+      if (_.includes(['meter', 'progressbar'], o.feature)) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         return it('Caniuse result for ' + o.ciufeature + ' matches Modernizr\'s result for ' + o.feature, function() {
           return expect([
             Modernizr.meter,

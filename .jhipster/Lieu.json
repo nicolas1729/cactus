@@ -1,12 +1,27 @@
 {
+<<<<<<< HEAD
     "relationships": [],
     "fields": [
         {
             "fieldId": 1,
+=======
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "terrain",
+            "otherEntityName": "terrain",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "description",
             "fieldType": "String"
         },
         {
+<<<<<<< HEAD
             "fieldId": 2,
             "fieldName": "latitude",
             "fieldType": "Integer",
@@ -27,3 +42,29 @@
     "service": "serviceClass",
     "pagination": "no"
 }
+=======
+            "fieldName": "latitude",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        }
+    ],
+    "changelogDate": "20170312113158",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "lieu",
+    "pagination": "pagination"
+}
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

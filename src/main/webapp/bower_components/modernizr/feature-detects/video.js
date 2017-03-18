@@ -5,7 +5,11 @@
   "caniuse": "video",
   "tags": ["html5"],
   "knownBugs": [
+<<<<<<< HEAD
     "Without QuickTime, `Modernizr.video.h264` will be `undefined`; http://github.com/Modernizr/Modernizr/issues/546"
+=======
+    "Without QuickTime, `Modernizr.video.h264` will be `undefined`; https://github.com/Modernizr/Modernizr/issues/546"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   ],
   "polyfills": [
     "html5media",

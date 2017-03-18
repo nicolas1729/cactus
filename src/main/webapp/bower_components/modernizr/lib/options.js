@@ -64,8 +64,13 @@ function options(cb, allMetadata) {
                 });
 
                 return {
+<<<<<<< HEAD
                   name: _.where(tags, {title: 'optionName'})[0].description,
                   property: _.where(tags, {title: 'optionProp'})[0].description
+=======
+                  name: _.filter(tags, {title: 'optionName'})[0].description,
+                  property: _.filter(tags, {title: 'optionProp'})[0].description
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 };
               }
             })

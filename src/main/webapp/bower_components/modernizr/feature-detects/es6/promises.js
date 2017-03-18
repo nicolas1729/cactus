@@ -11,7 +11,11 @@
     "href": "https://github.com/domenic/promises-unwrapping"
   },{
     "name": "Chromium dashboard - ES6 Promises",
+<<<<<<< HEAD
     "href": "http://www.chromestatus.com/features/5681726336532480"
+=======
+    "href": "https://www.chromestatus.com/features/5681726336532480"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "JavaScript Promises: There and back again - HTML5 Rocks",
     "href": "http://www.html5rocks.com/en/tutorials/es6/promises/"

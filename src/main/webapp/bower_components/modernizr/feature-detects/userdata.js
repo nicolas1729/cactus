@@ -6,7 +6,11 @@
   "authors": ["@stereobooster"],
   "notes": [{
     "name": "MSDN Documentation",
+<<<<<<< HEAD
     "href": "http://msdn.microsoft.com/en-us/library/ms531424(v=vs.85).aspx"
+=======
+    "href": "https://msdn.microsoft.com/en-us/library/ms531424.aspx"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

@@ -21,10 +21,14 @@ define(['lodash'], function(_) {
     config['feature-detects'] = config['feature-detects'] || [];
 
     // Some special cases
+<<<<<<< HEAD
     var setClasses = _.contains(config.options, 'setClasses');
 
     // Remove the special cases
     config.options = _.without(config.options, 'setClasses');
+=======
+    var setClasses = _.includes(config.options, 'setClasses');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     var output = 'require(["ModernizrProto", "Modernizr", "testRunner"';
 
@@ -38,8 +42,14 @@ define(['lodash'], function(_) {
       config.options = _.without(config.options, 'html5shiv');
     }
 
+<<<<<<< HEAD
     // Load in the rest of the options (they dont return values, so they aren't declared
     _.forEach(config.options, function(option) {
+=======
+    // Load in the rest of the options, excluding special cases
+    // (they dont return values, so they aren't declared)
+    _.forEach(_.without(config.options, 'setClasses'), function(option) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       output += ', "' + option + '"';
     });
 

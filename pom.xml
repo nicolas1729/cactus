@@ -5,6 +5,7 @@
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
         <version>1.3.1.RELEASE</version>
         <relativePath />
     </parent>
@@ -14,12 +15,24 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>cactus</name>
+=======
+        <version>1.4.2.RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.legion.cactus</groupId>
+    <artifactId>cactus</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Cactus</name>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     <prerequisites>
         <maven>3.0.0</maven>
     </prerequisites>
 
     <properties>
+<<<<<<< HEAD
         <assertj-core.version>3.1.0</assertj-core.version>
         <awaitility.version>1.4.0</awaitility.version>
         <commons-io.version>2.4</commons-io.version>
@@ -43,6 +56,44 @@
         <run.addResources>false</run.addResources>
         <sonar-maven-plugin.version>2.6</sonar-maven-plugin.version>
         <sonar.exclusions>src/main/webapp/assets/**/*.*, src/main/webapp/bower_components/**/*.*, src/main/webapp/dist/**/*.*</sonar.exclusions>
+=======
+        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
+        <assertj-core.version>3.5.2</assertj-core.version>
+        <awaitility.version>1.7.0</awaitility.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang.version>3.4</commons-lang.version>
+        <frontend-maven-plugin.version>1.0</frontend-maven-plugin.version>
+        <gatling-maven-plugin.version>2.2.0</gatling-maven-plugin.version>
+        <gatling.version>2.2.0</gatling.version>
+        <hibernate.version>4.3.11.Final</hibernate.version>
+        <hikaricp.version>2.4.6</hikaricp.version>
+        <!-- Spring social -->
+        <httpclient.version>4.5.1</httpclient.version>
+        <jacoco-maven-plugin.version>0.7.7.201606060606</jacoco-maven-plugin.version>
+        <java.version>1.8</java.version>
+        <javax.inject.version>1</javax.inject.version>
+        <jna.version>4.2.2</jna.version>
+        <liquibase-hibernate4.version>3.5</liquibase-hibernate4.version>
+        <liquibase-slf4j.version>2.0.0</liquibase-slf4j.version>
+        <liquibase.version>3.4.2</liquibase.version>
+        <logstash-logback-encoder.version>4.7</logstash-logback-encoder.version>
+        <m2e.apt.activation>jdt_apt</m2e.apt.activation>
+        <mapstruct.version>1.1.0.CR2</mapstruct.version>
+        <maven-enforcer-plugin.version>1.4.1</maven-enforcer-plugin.version>
+        <maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <metrics-spring.version>3.1.3</metrics-spring.version>
+        <!-- These remain empty unless the corresponding profile is active -->
+        <profile.no-liquibase />
+        <profile.swagger />
+        <!-- Sonar properties -->
+        <project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>
+        <run.addResources>false</run.addResources>
+        <sonar-maven-plugin.version>3.2</sonar-maven-plugin.version>
+        <sonar.exclusions>src/main/webapp/content/**/*.*, src/main/webapp/bower_components/**/*.*, target/www/**/*.*</sonar.exclusions>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         <sonar.jacoco.itReportPath>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
         <sonar.jacoco.reportPath>${project.testresult.directory}/coverage/jacoco/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
@@ -53,13 +104,30 @@
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
+<<<<<<< HEAD
         <spring-security.version>4.0.2.RELEASE</spring-security.version>
         <springfox.version>2.0.3</springfox.version>
+=======
+        <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
+        <spring-security.version>4.1.3.RELEASE</spring-security.version>
+        <spring-social-facebook.version>2.0.3.RELEASE</spring-social-facebook.version>
+        <spring-social-google.version>1.0.0.RELEASE</spring-social-google.version>
+        <spring-social-security.version>1.1.2.RELEASE</spring-social-security.version>
+        <spring-social-twitter.version>1.1.2.RELEASE</spring-social-twitter.version>
+        <springfox.version>2.6.1</springfox.version>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>jackson-datatype-hibernate4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <artifactId>jackson-datatype-hppc</artifactId>
             <version>${jackson.version}</version>
         </dependency>
@@ -90,6 +158,14 @@
             <!-- parent POM declares this dependency in default (compile) scope -->
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>com.mattbertolini</groupId>
+            <artifactId>liquibase-slf4j</artifactId>
+            <version>${liquibase-slf4j.version}</version>
+        </dependency>
+        <dependency>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <groupId>com.ryantenney.metrics</groupId>
             <artifactId>metrics-spring</artifactId>
             <version>${metrics-spring.version}</version>
@@ -118,6 +194,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<<<<<<< HEAD
         <!-- The HikariCP Java Agent is disabled by default, as it is experimental
           <dependency>
               <groupId>com.zaxxer</groupId>
@@ -125,12 +202,16 @@
                       <version>${HikariCP.version}</version>
                       </dependency>
                   -->
+=======
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>${commons-io.version}</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>${commons-lang.version}</version>
@@ -147,6 +228,8 @@
             <version>${metrics-spark-reporter.version}</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-annotation</artifactId>
             <version>${dropwizard-metrics.version}</version>
@@ -157,6 +240,14 @@
         </dependency>
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>metrics-ehcache</artifactId>
+            <version>${dropwizard-metrics.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <artifactId>metrics-graphite</artifactId>
         </dependency>
         <dependency>
@@ -197,6 +288,14 @@
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>springfox-bean-validators</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <artifactId>springfox-swagger2</artifactId>
             <version>${springfox.version}</version>
             <exclusions>
@@ -212,6 +311,48 @@
             <version>${javax.inject.version}</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>${jna.version}</version>
+        </dependency>
+        <!-- Spring Cloud -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash-logback-encoder.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-core</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>logback-access</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <!-- social -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj-core.version}</version>
@@ -219,6 +360,20 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${hibernate.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>ehcache-core</artifactId>
+                    <groupId>net.sf.ehcache</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <artifactId>hibernate-envers</artifactId>
         </dependency>
         <dependency>
@@ -226,16 +381,32 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jetty-servlet</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
             <version>${mapstruct.version}</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>org.mongeez</groupId>
             <artifactId>mongeez</artifactId>
             <version>0.9.6</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
@@ -262,7 +433,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
+=======
+            <artifactId>spring-boot-starter-cloud-connectors</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -295,6 +478,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<<<<<<< HEAD
         <!-- Spring Cloud -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -346,6 +530,44 @@
                 </excludes>
             </resource>
         </resources>
+=======
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-data</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-facebook</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>${spring-social-google.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-twitter</artifactId>
+        </dependency>
+        <!-- jhipster-needle-maven-add-dependency -->
+    </dependencies>
+    <build>
+        <defaultGoal>spring-boot:run</defaultGoal>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         <pluginManagement>
             <plugins>
                 <!--
@@ -364,7 +586,11 @@
                                     <pluginExecutionFilter>
                                         <groupId>org.jacoco</groupId>
                                         <artifactId>jacoco-maven-plugin</artifactId>
+<<<<<<< HEAD
                                         <versionRange>[0.7.4,)</versionRange>
+=======
+                                        <versionRange>${jacoco-maven-plugin.version}</versionRange>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                                         <goals>
                                             <goal>prepare-agent</goal>
                                         </goals>
@@ -373,6 +599,25 @@
                                         <ignore />
                                     </action>
                                 </pluginExecution>
+<<<<<<< HEAD
+=======
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>com.github.eirslett</groupId>
+                                        <artifactId>frontend-maven-plugin</artifactId>
+                                        <versionRange>${frontend-maven-plugin.version}</versionRange>
+                                        <goals>
+                                            <goal>install-node-and-npm</goal>
+                                            <goal>npm</goal>
+                                            <goal>bower</goal>
+                                            <goal>gulp</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
@@ -381,9 +626,15 @@
         </pluginManagement>
         <plugins>
             <plugin>
+<<<<<<< HEAD
                 <groupId>com.google.code.sortpom</groupId>
                 <artifactId>maven-sortpom-plugin</artifactId>
                 <version>${maven-sortpom-plugin.version}</version>
+=======
+                <groupId>com.github.ekryd.sortpom</groupId>
+                <artifactId>sortpom-maven-plugin</artifactId>
+                <version>${sortpom-maven-plugin.version}</version>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -402,6 +653,25 @@
                 </configuration>
             </plugin>
             <plugin>
+<<<<<<< HEAD
+=======
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.10</version>
+                <configuration>
+                    <imageName>cactus</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.war</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+            <plugin>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling-maven-plugin.version}</version>
@@ -411,6 +681,12 @@
                     <resultsFolder>target/gatling/results</resultsFolder>
                     <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
                     <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+<<<<<<< HEAD
+=======
+                    <!-- This will run multiple simulations one by one. Useful when doing gatling tests in CI
+                         You must remove the simulationClass property in order to run multiple simulations -->
+                    <!--<runMultipleSimulations>true</runMultipleSimulations>-->
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                     <!-- This will force Gatling to ask which simulation to run
                       This is useful when you have multiple simulations -->
                     <simulationClass>*</simulationClass>
@@ -418,6 +694,23 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+<<<<<<< HEAD
+=======
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <configuration>
                     <downloadSources>true</downloadSources>
@@ -451,6 +744,7 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+<<<<<<< HEAD
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <argLine>-Xmx256m ${surefireArgLine}</argLine>
@@ -500,6 +794,52 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>${sonar-maven-plugin.version}</version>
+=======
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>default-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/classes</outputDirectory>
+                            <useDefaultDelimiters>false</useDefaultDelimiters>
+                            <delimiters>
+                                <delimiter>#</delimiter>
+                            </delimiters>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources/</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>**/*.xml</include>
+                                        <include>**/*.yml</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>src/main/resources/</directory>
+                                    <filtering>false</filtering>
+                                    <excludes>
+                                        <exclude>**/*.xml</exclude>
+                                        <exclude>**/*.yml</exclude>
+                                    </excludes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!-- Force alphabetical order to have a reproducible build -->
+                    <runOrder>alphabetical</runOrder>
+                </configuration>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -514,8 +854,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</destFile>
+<<<<<<< HEAD
                             <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                         </configuration>
                     </execution>
                     <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run -->
@@ -533,19 +876,70 @@
                 </executions>
             </plugin>
             <plugin>
+<<<<<<< HEAD
+=======
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liquibase.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                        <version>3.18.2-GA</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.liquibase.ext</groupId>
+                        <artifactId>liquibase-hibernate4</artifactId>
+                        <version>${liquibase-hibernate4.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                        <version>${project.parent.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
+                    <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/cactus</url>
+                    <defaultSchemaName>cactus</defaultSchemaName>
+                    <username>root</username>
+                    <password />
+                    <referenceUrl>hibernate:spring:com.legion.cactus.domain?dialect=org.hibernate.dialect.MySQL5InnoDBDialect&amp;hibernate.ejb.naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</referenceUrl>
+                    <verbose>true</verbose>
+                    <logging>debug</logging>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <executable>true</executable>
+<<<<<<< HEAD
                     <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
                     <arguments>
                         <argument>--spring.profiles.active=dev</argument>
                     </arguments>
+=======
+                    <fork>true</fork>
+                    <!--
+                    Enable the line below to have remote debugging of your application on port 5005
+                    <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
+                    -->
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 </configuration>
             </plugin>
             <!-- jhipster-needle-maven-add-plugin -->
         </plugins>
     </build>
+<<<<<<< HEAD
 
     <reporting>
         <plugins>
@@ -576,10 +970,32 @@
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
+=======
+    <profiles>
+        <profile>
+            <id>no-liquibase</id>
+            <properties>
+                <profile.no-liquibase>,no-liquibase</profile.no-liquibase>
+            </properties>
+        </profile>
+        <profile>
+            <id>swagger</id>
+            <properties>
+                <profile.swagger>,swagger</profile.swagger>
+            </properties>
+        </profile>
+        <profile>
+            <id>shell</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-remote-shell</artifactId>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 </dependency>
             </dependencies>
         </profile>
         <profile>
+<<<<<<< HEAD
             <id>fast</id>
             <build>
                 <plugins>
@@ -591,6 +1007,19 @@
                             <arguments>
                                 <argument>--spring.profiles.active=dev,fast</argument>
                             </arguments>
+=======
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <warSourceDirectory>src/main/webapp/</warSourceDirectory>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                         </configuration>
                     </plugin>
                 </plugins>
@@ -598,6 +1027,11 @@
             <properties>
                 <!-- log configuration -->
                 <logback.loglevel>DEBUG</logback.loglevel>
+<<<<<<< HEAD
+=======
+                <!-- default Spring profiles -->
+                <spring.profiles.active>dev${profile.no-liquibase}</spring.profiles.active>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             </properties>
             <dependencies>
                 <dependency>
@@ -616,6 +1050,7 @@
             <build>
                 <plugins>
                     <plugin>
+<<<<<<< HEAD
                         <groupId>com.github.trecloux</groupId>
                         <artifactId>yeoman-maven-plugin</artifactId>
                         <version>0.4</version>
@@ -634,6 +1069,69 @@
                         <configuration>
                             <yeomanProjectDirectory>${project.basedir}</yeomanProjectDirectory>
                         </configuration>
+=======
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.0</version>
+                        <executions>
+                            <execution>
+                                <id>install node and npm</id>
+                                <goals>
+                                    <goal>install-node-and-npm</goal>
+                                </goals>
+                                <configuration>
+                                    <nodeVersion>v6.9.1</nodeVersion>
+                                    <npmVersion>3.10.9</npmVersion>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>npm install</id>
+                                <goals>
+                                    <goal>npm</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>install</arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>npm rebuild node-sass</id>
+                                <goals>
+                                    <goal>npm</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>rebuild node-sass</arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>bower install</id>
+                                <goals>
+                                    <goal>bower</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>install --no-color</arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>gulp build</id>
+                                <goals>
+                                    <goal>gulp</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>build --no-notification</arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>gulp test</id>
+                                <phase>test</phase>
+                                <goals>
+                                    <goal>gulp</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>test --no-notification</arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                     </plugin>
                     <plugin>
                         <artifactId>maven-clean-plugin</artifactId>
@@ -641,6 +1139,7 @@
                         <configuration>
                             <filesets>
                                 <fileset>
+<<<<<<< HEAD
                                     <directory>src/main/webapp/dist</directory>
                                 </fileset>
                                 <fileset>
@@ -648,11 +1147,15 @@
                                 </fileset>
                                 <fileset>
                                     <directory>node_modules</directory>
+=======
+                                    <directory>target/www/</directory>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                                 </fileset>
                             </filesets>
                         </configuration>
                     </plugin>
                     <plugin>
+<<<<<<< HEAD
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
@@ -660,6 +1163,26 @@
                             <arguments>
                                 <argument>--spring.profiles.active=prod</argument>
                             </arguments>
+=======
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <warSourceDirectory>target/www/</warSourceDirectory>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>build-info</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <executable>true</executable>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                         </configuration>
                     </plugin>
                 </plugins>
@@ -667,14 +1190,136 @@
             <properties>
                 <!-- log configuration -->
                 <logback.loglevel>INFO</logback.loglevel>
+<<<<<<< HEAD
+=======
+                <!-- default Spring profiles -->
+                <spring.profiles.active>prod${profile.swagger}${profile.no-liquibase}</spring.profiles.active>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
                     <artifactId>spring-boot-starter-tomcat</artifactId>
+=======
+                    <artifactId>spring-boot-starter-undertow</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <!--
+                Profile for doing "continuous compilation" with the Scala Maven plugin.
+                It allows automatic compilation of Java classes as soon as they are saved.
+                To use it, run in 3 terminals:
+                - './mvnw -Pcc scala:cc' for continous compilation of your classes
+                - './mvnw -Pcc' for hot reload of Spring boot
+                - 'gulp' for hot reload of the HTML/JavaScript assets
+                Everything should hot reload automatically!
+            -->
+            <id>cc</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.alchim31.maven</groupId>
+                        <artifactId>scala-maven-plugin</artifactId>
+                        <version>3.2.2</version>
+                        <executions>
+                            <execution>
+                                <id>compile</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>add-source</goal>
+                                    <goal>compile</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>test-compile</id>
+                                <phase>test-compile</phase>
+                                <goals>
+                                    <goal>add-source</goal>
+                                    <goal>testCompile</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <recompileMode>incremental</recompileMode>
+                            <verbose>true</verbose>
+                            <scalaVersion>2.11.7</scalaVersion>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>default-compile</id>
+                                <phase>none</phase>
+                            </execution>
+                            <execution>
+                                <id>default-testCompile</id>
+                                <phase>none</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <configuration>
+                            <warSourceDirectory>src/main/webapp/</warSourceDirectory>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>true</executable>
+                            <fork>true</fork>
+                            <addResources>true</addResources>
+                            <!--
+                            Enable the line below to have remote debugging of your application on port 5005
+                            <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
+                            -->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <!-- log configuration -->
+                <logback.loglevel>DEBUG</logback.loglevel>
+                <!-- default Spring profiles -->
+                <spring.profiles.active>dev,swagger</spring.profiles.active>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-devtools</artifactId>
+                    <optional>true</optional>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-undertow</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <!--
+                Profile for applying IDE-specific configuration.
+                At the moment it only configures MapStruct, which you need when working
+                with DTOs.
+            -->
+            <id>IDE</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.mapstruct</groupId>
+                    <artifactId>mapstruct-processor</artifactId>
+                    <version>${mapstruct.version}</version>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
                 </dependency>
             </dependencies>
         </profile>
     </profiles>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 </project>

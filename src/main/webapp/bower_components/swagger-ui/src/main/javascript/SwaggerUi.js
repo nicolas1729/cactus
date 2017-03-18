@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+ /*global JSONEditor*/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 'use strict';
 
 window.SwaggerUi = Backbone.Router.extend({
@@ -13,7 +17,16 @@ window.SwaggerUi = Backbone.Router.extend({
   // SwaggerUi accepts all the same options as SwaggerApi
   initialize: function(options) {
     options = options || {};
+<<<<<<< HEAD
     if(!options.highlightSizeThreshold) {
+=======
+
+    if (options.defaultModelRendering !== 'model') {
+      options.defaultModelRendering = 'schema';
+    }
+
+    if (!options.highlightSizeThreshold) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       options.highlightSizeThreshold = 100000;
     }
 
@@ -36,7 +49,11 @@ window.SwaggerUi = Backbone.Router.extend({
     }
 
     if (typeof options.oauth2RedirectUrl === 'string') {
+<<<<<<< HEAD
       window.oAuthRedirectUrl = options.redirectUrl;
+=======
+      window.oAuthRedirectUrl = options.oauth2RedirectUrl;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     }
 
     // Create an empty div which contains the dom_id
@@ -62,6 +79,19 @@ window.SwaggerUi = Backbone.Router.extend({
     this.headerView.on('update-swagger-ui', function(data) {
       return that.updateSwaggerUi(data);
     });
+<<<<<<< HEAD
+=======
+
+    // JSon Editor custom theming
+     JSONEditor.defaults.iconlibs.swagger = JSONEditor.AbstractIconLib.extend({
+      mapping: {
+        collapse: 'collapse',
+        expand: 'expand'
+        },
+      icon_prefix: 'swagger-'
+      });
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },
 
   // Set an option after initializing
@@ -86,6 +116,13 @@ window.SwaggerUi = Backbone.Router.extend({
     if (this.mainView) {
       this.mainView.clear();
     }
+<<<<<<< HEAD
+=======
+
+    if (this.authView) {
+      this.authView.remove();
+    }
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     var url = this.options.url;
     if (url && url.indexOf('http') !== 0) {
       url = this.buildUrl(window.location.href.toString(), url);
@@ -117,6 +154,10 @@ window.SwaggerUi = Backbone.Router.extend({
   // This is bound to success handler for SwaggerApi
   //  so it gets called when SwaggerApi completes loading
   render: function(){
+<<<<<<< HEAD
+=======
+    var authsModel;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     this.showMessage('Finished Loading Resource Information. Rendering Swagger UI...');
     this.mainView = new SwaggerUi.Views.MainView({
       model: this.api,
@@ -124,6 +165,21 @@ window.SwaggerUi = Backbone.Router.extend({
       swaggerOptions: this.options,
       router: this
     }).render();
+<<<<<<< HEAD
+=======
+    if (!_.isEmpty(this.api.securityDefinitions)){
+      authsModel = _.map(this.api.securityDefinitions, function (auth, name) {
+        var result = {};
+        result[name] = auth;
+        return result;
+      });
+      this.authView = new SwaggerUi.Views.AuthButtonView({
+        data: SwaggerUi.utils.parseSecurityDefinitions(authsModel),
+        router: this
+      });
+      $('#auth_container').append(this.authView.render().el);
+    }
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     this.showMessage();
     switch (this.options.docExpansion) {
       case 'full':
@@ -176,7 +232,11 @@ window.SwaggerUi = Backbone.Router.extend({
     var $msgbar = $('#message-bar');
     $msgbar.removeClass('message-fail');
     $msgbar.addClass('message-success');
+<<<<<<< HEAD
     $msgbar.html(data);
+=======
+    $msgbar.text(data);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     if(window.SwaggerTranslator) {
       window.SwaggerTranslator.translate($msgbar);
     }
@@ -213,6 +273,13 @@ window.SwaggerUi = Backbone.Router.extend({
 });
 
 window.SwaggerUi.Views = {};
+<<<<<<< HEAD
+=======
+window.SwaggerUi.Models = {};
+window.SwaggerUi.Collections = {};
+window.SwaggerUi.partials = {};
+window.SwaggerUi.utils = {};
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 // don't break backward compatibility with previous versions and warn users to upgrade their code
 (function(){

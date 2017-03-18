@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿/*!
+=======
+/*!
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 {
   "name": "Web Cryptography",
   "property": "cryptography",
@@ -7,7 +11,11 @@
   "authors": ["roblarsen"],
   "notes": [{
     "name": "W3C Editor's Draft",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/WebCryptoAPI/"
+=======
+    "href": "https://www.w3.org/TR/WebCryptoAPI/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "polyfills": [
     "polycrypt"

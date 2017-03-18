@@ -12,6 +12,10 @@ function mockI18nCalls() {
 
 function mockScriptsCalls() {
     inject(function($httpBackend) {
+<<<<<<< HEAD
         $httpBackend.whenGET(/scripts\/.*/).respond({});
+=======
+        $httpBackend.whenGET(/app\/.*/).respond({});
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     });
 }

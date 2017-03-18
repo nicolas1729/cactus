@@ -7,6 +7,7 @@
   "knownBugs": ["False-positives on webOS (https://github.com/Modernizr/Modernizr/issues/202)"],
   "notes": [{
     "name": "Webkit Gradient Syntax",
+<<<<<<< HEAD
     "href": "http://webkit.org/blog/175/introducing-css-gradients/"
   },{
     "name": "Mozilla Linear Gradient Syntax",
@@ -17,6 +18,15 @@
   },{
     "name": "W3C Gradient Spec",
     "href": "dev.w3.org/csswg/css3-images/#gradients-"
+=======
+    "href": "https://webkit.org/blog/175/introducing-css-gradients/"
+  },{
+    "name": "Linear Gradient Syntax",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient"
+  },{
+    "name": "W3C Gradient Spec",
+    "href": "https://drafts.csswg.org/css-images-3/#gradients"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

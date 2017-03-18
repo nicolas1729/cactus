@@ -275,8 +275,11 @@
 			return attr in input;
 		},
 
+<<<<<<< HEAD
 		_support
 
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 		/**
 		 * FileAPI (core object)
 		 */

@@ -7,7 +7,11 @@
   "authors": ["Andrew Betts (@triblondon)"],
   "notes": [{
     "name" : "W3C Selectors reference",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/selectors-api/#queryselectorall"
+=======
+    "href": "https://www.w3.org/TR/selectors-api/#queryselectorall"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "polyfills": ["css-selector-engine"]
 }

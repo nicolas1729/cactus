@@ -1,18 +1,33 @@
 ######################
 # Project Specific
 ######################
+<<<<<<< HEAD
 /src/main/webapp/dist
+=======
+/src/main/webapp/content/css/main.css
+/target/www/**
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # Node
 ######################
+<<<<<<< HEAD
 /node/**
 /node_modules/**
+=======
+node/
+node_tmp/
+node_modules/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # SASS
 ######################
+<<<<<<< HEAD
 .sass-cache/**
+=======
+.sass-cache/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # Eclipse
@@ -20,16 +35,25 @@
 *.pydevproject
 .project
 .metadata
+<<<<<<< HEAD
 /bin/**
 /tmp/**
 /tmp/**/*
+=======
+tmp/
+tmp/**/*
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
 .classpath
+<<<<<<< HEAD
 .settings/**
+=======
+.settings/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 .loadpath
 /src/main/resources/rebel.xml
 
@@ -48,7 +72,11 @@ local.properties
 ######################
 # Intellij
 ######################
+<<<<<<< HEAD
 .idea/**
+=======
+.idea/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 *.iml
 *.iws
 *.ipr
@@ -56,15 +84,31 @@ local.properties
 *.orig
 
 ######################
+<<<<<<< HEAD
 # Maven
 ######################
 /log/**
 /target/**
+=======
+# Visual Studio Code
+######################
+.vscode/
+
+######################
+# Maven
+######################
+log/
+target/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # Gradle
 ######################
+<<<<<<< HEAD
 .gradle/**
+=======
+.gradle/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # Package Files
@@ -99,10 +143,16 @@ Desktop.ini
 ######################
 # Directories
 ######################
+<<<<<<< HEAD
 /build/**
 /bin/**
 /spring_loaded/**
 /deploy/**
+=======
+/build/
+/bin/
+/deploy/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ######################
 # Logs
@@ -126,3 +176,11 @@ Desktop.ini
 # Maven Wrapper
 ######################
 !.mvn/wrapper/maven-wrapper.jar
+<<<<<<< HEAD
+=======
+
+######################
+# ESLint
+######################
+.eslintcache
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

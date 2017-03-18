@@ -16,7 +16,11 @@
 }
 !*/
 /* DOC
+<<<<<<< HEAD
 Detects support for XDomainReuqest in ie9 & ie8
+=======
+Detects support for XDomainRequest in IE9 & IE8
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 */
 define(['Modernizr'], function(Modernizr) {
   Modernizr.addTest('xdomainrequest', 'XDomainRequest' in window);

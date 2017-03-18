@@ -9,10 +9,17 @@
     "href": "https://developer.mozilla.org/en/CSS/background-position"
   }, {
     "name": "W3 Spec",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/css3-background/#background-position"
   }, {
     "name": "Demo",
     "href": "http://jsfiddle.net/Blink/bBXvt/"
+=======
+    "href": "https://www.w3.org/TR/css3-background/#background-position"
+  }, {
+    "name": "Demo",
+    "href": "https://jsfiddle.net/Blink/bBXvt/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

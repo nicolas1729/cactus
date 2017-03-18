@@ -9,7 +9,12 @@ define(['ModernizrProto', 'testPropsAll', 'cssToDOM', 'atRule'], function(Modern
    * @access public
    * @function prefixed
    * @param {string} prop - String name of the property to test for
+<<<<<<< HEAD
    * @param {object} [obj]- An object to test for the prefixed properties on
+=======
+   * @param {object} [obj] - An object to test for the prefixed properties on
+   * @param {HTMLElement} [elem] - An element used to test specific properties against
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * @returns {string|false} The string representing the (possibly prefixed) valid
    * version of the property, or `false` when it is unsupported.
    * @example

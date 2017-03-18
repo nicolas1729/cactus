@@ -7,10 +7,17 @@
   "authors": ["Craig Andrews (@candrews)"],
   "notes": [{
     "name" : "W3C VML reference",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/NOTE-VML"
   },{
     "name" : "Microsoft VML reference",
     "href": "http://msdn.microsoft.com/en-us/library/bb263898%28VS.85%29.aspx"
+=======
+    "href": "https://www.w3.org/TR/NOTE-VML"
+  },{
+    "name" : "Microsoft VML reference",
+    "href": "https://msdn.microsoft.com/en-us/library/bb263898.aspx"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

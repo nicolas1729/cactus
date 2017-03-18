@@ -10,12 +10,49 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+<<<<<<< HEAD
 spring:
     data:
         mongodb:
             host: localhost
             port: 27117
             database: cactusMaven
+=======
+
+spring:
+    application:
+        name: cactus
+    jackson:
+        serialization.write_dates_as_timestamps: false
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:h2:mem:cactus;DB_CLOSE_DELAY=-1
+        name:
+        username:
+        password:
+    jpa:
+        database-platform: com.legion.cactus.domain.util.FixedH2Dialect
+        database: H2
+        open-in-view: false
+        show-sql: true
+        hibernate:
+            ddl-auto: none
+            naming:
+                strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+    data:
+        elasticsearch:
+            cluster-name:
+            cluster-nodes:
+            properties:
+                path:
+                  logs: target/elasticsearch/log
+                  data: target/elasticsearch/data
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     mail:
         host: localhost
     mvc:
@@ -45,6 +82,7 @@ jhipster:
         maxPoolSize: 50
         queueCapacity: 10000
     security:
+<<<<<<< HEAD
         rememberme:
             # security key (this key should be unique for your application, and kept secret)
             key: a9f774f88ef7f2457e626d008f20a073e8ddbd91
@@ -56,5 +94,20 @@ jhipster:
         version: 0.0.1
         termsOfServiceUrl:
         contact:
+=======
+        rememberMe:
+            # security key (this key should be unique for your application, and kept secret)
+            key: 8e4cb571c034c7f06406f489a71070742565aaea
+    metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
+        jmx.enabled: true
+    swagger:
+        title: cactus API
+        description: cactus API documentation
+        version: 0.0.1
+        termsOfServiceUrl:
+        contactName:
+        contactUrl:
+        contactEmail:
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         license:
         licenseUrl:

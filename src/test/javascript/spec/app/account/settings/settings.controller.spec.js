@@ -22,7 +22,11 @@ describe('Controller Tests', function() {
                 'Auth': MockAuth
             };
             createController = function() {
+<<<<<<< HEAD
                 $injector.get('$controller')('SettingsController', locals);
+=======
+                $injector.get('$controller')('SettingsController as vm', locals);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             }
         }));
 
@@ -42,12 +46,20 @@ describe('Controller Tests', function() {
             $scope.$apply(createController);
 
             //WHEN
+<<<<<<< HEAD
             $scope.save();
+=======
+            $scope.vm.save();
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
             //THEN
             expect(MockPrincipal.identity).toHaveBeenCalled();
             expect(MockAuth.updateAccount).toHaveBeenCalledWith(accountValues);
+<<<<<<< HEAD
             expect($scope.settingsAccount).toEqual(accountValues);
+=======
+            expect($scope.vm.settingsAccount).toEqual(accountValues);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('should notify of success upon successful save', function() {
@@ -61,11 +73,19 @@ describe('Controller Tests', function() {
             createController();
 
             //WHEN
+<<<<<<< HEAD
             $scope.$apply($scope.save);
 
             //THEN
             expect($scope.error).toBeNull();
             expect($scope.success).toBe('OK');
+=======
+            $scope.$apply($scope.vm.save);
+
+            //THEN
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.success).toBe('OK');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('should notify of error upon failed save', function() {
@@ -75,11 +95,19 @@ describe('Controller Tests', function() {
             createController();
 
             //WHEN
+<<<<<<< HEAD
             $scope.$apply($scope.save);
 
             //THEN
             expect($scope.error).toEqual('ERROR');
             expect($scope.success).toBeNull();
+=======
+            $scope.$apply($scope.vm.save);
+
+            //THEN
+            expect($scope.vm.error).toEqual('ERROR');
+            expect($scope.vm.success).toBeNull();
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
     });
 });

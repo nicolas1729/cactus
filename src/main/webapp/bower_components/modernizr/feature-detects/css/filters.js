@@ -12,7 +12,11 @@
   }]
 }
 !*/
+<<<<<<< HEAD
 define(['Modernizr', 'createElement', 'prefixes', 'testAllProps', 'test/css/supports'], function(Modernizr, createElement, testAllProps, prefixes) {
+=======
+define(['Modernizr', 'createElement', 'prefixes', 'testAllProps', 'test/css/supports'], function(Modernizr, createElement, prefixes, testAllProps) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   Modernizr.addTest('cssfilters', function() {
     if (Modernizr.supports) {
       return testAllProps('filter', 'blur(2px)');

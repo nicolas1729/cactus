@@ -14,6 +14,7 @@ define(['lodash', 'metadata'], function(_, metadata) {
     var dontmin = !config.minify;
 
     // Config uses amdPaths, but build query uses property names
+<<<<<<< HEAD
     var props = _.map(config['feature-detects'], function(amdPath) {
       var detect = getDetectObjByAmdPath(amdPath);
       var property = detect && detect.property;
@@ -22,14 +23,32 @@ define(['lodash', 'metadata'], function(_, metadata) {
         property.replace('-', '_');
       return property;
     });
+=======
+    var props = _.chain(config['feature-detects'])
+      .map(function(amdPath) {
+        var detect = getDetectObjByAmdPath(amdPath);
+        var property = detect && detect.property;
+        if (property) {
+          property = _.isArray(property) ?
+            property.join('_').replace('-', '_') :
+            property.replace('-', '_');
+          return property;
+        }
+    })
+    .filter()
+    .value();
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     // Config uses amdPaths, but the option's just use their names.
     // A few of the values have to be massaged in order to match
     // the `value`
     var opts = _.map(config.options, function(opt) {
+<<<<<<< HEAD
       if (opt == 'setClasses') {
         return 'cssclasses';
       }
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       if (opt.indexOf('html5') === 0) {
         opt = opt.replace('html5', '');
       }

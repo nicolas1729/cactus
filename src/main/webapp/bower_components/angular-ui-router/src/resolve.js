@@ -216,7 +216,11 @@ function $Resolve(  $q,    $injector) {
    * propagated immediately. Once the `$resolve` promise has been rejected, no 
    * further invocables will be called.
    * 
+<<<<<<< HEAD
    * Cyclic dependencies between invocables are not permitted and will caues `$resolve`
+=======
+   * Cyclic dependencies between invocables are not permitted and will cause `$resolve`
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * to throw an error. As a special case, an injectable can depend on a parameter 
    * with the same name as the injectable, which will be fulfilled from the `parent` 
    * injectable of the same name. This allows inherited values to be decorated. 

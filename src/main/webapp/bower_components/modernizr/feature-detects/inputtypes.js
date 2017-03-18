@@ -50,9 +50,15 @@ define(['Modernizr', 'inputElem', 'docElement'], function(Modernizr, inputElem, 
   var inputtypes = 'search tel url email datetime date month week time datetime-local number range color'.split(' ');
   var inputs = {};
 
+<<<<<<< HEAD
   Modernizr['inputtypes'] = (function(props) {
     var len = props.length;
     var smile = ':)';
+=======
+  Modernizr.inputtypes = (function(props) {
+    var len = props.length;
+    var smile = '1)';
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     var inputElemType;
     var defaultView;
     var bool;
@@ -91,7 +97,11 @@ define(['Modernizr', 'inputElem', 'docElement'], function(Modernizr, inputElem, 
           // Interestingly, opera fails the earlier test, so it doesn't
           //  even make it here.
 
+<<<<<<< HEAD
         } else if (/^(url|email|number)$/.test(inputElemType)) {
+=======
+        } else if (/^(url|email)$/.test(inputElemType)) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
           // Real url and email support comes with prebaked validation.
           bool = inputElem.checkValidity && inputElem.checkValidity() === false;
 
