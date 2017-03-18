@@ -13,6 +13,7 @@ import java.util.List;
 public interface PersonnageMapper {
 
     @Mapping(source = "user.id", target = "userId")
+    @Mapping(source = "user.login", target = "userLogin")
     PersonnageDTO personnageToPersonnageDTO(Personnage personnage);
 
     List<PersonnageDTO> personnagesToPersonnageDTOs(List<Personnage> personnages);

@@ -74,6 +74,7 @@ public class PersonnageResource {
         String login = SecurityUtils.getCurrentUserLogin();
         Optional<User> user = userRepository.findOneByLogin(login);
         personnageDTO.setUserId(user.get().getId());
+        personnageDTO.setUserLogin(user.get().getLogin());
         //Optional<Lieu> lieu = lieuRepository.findOneByLongitudeAndLatitude(1,1);
         //personnage.setLieu(lieu.get());
         personnageDTO.setCompfabriquer(personnageDTO.getCompfabriquer());

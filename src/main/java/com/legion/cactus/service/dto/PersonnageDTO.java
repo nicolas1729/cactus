@@ -61,8 +61,9 @@ public class PersonnageDTO implements Serializable {
 
     private LocalDate datefin;
 
-
     private Long userId;
+
+    private String userLogin;
     
     public Long getId() {
         return id;
@@ -169,6 +170,14 @@ public class PersonnageDTO implements Serializable {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getUserLogin() {
+        return userLogin;
+    }
+
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
     }
 
     @Override
