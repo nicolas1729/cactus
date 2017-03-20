@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "relationships": [],
     "fields": [
         {
@@ -67,11 +68,129 @@
         },
         {
             "fieldId": 9,
+=======
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mort",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blessure",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": "50"
+        },
+        {
+            "fieldName": "fatigue",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": "50"
+        },
+        {
+            "fieldName": "compeau",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "compnour",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "compfabriquer",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "compconstruire",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "compcombat",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "compsoigner",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "datecreation",
+            "fieldType": "LocalDate"
+        },
+        {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             "fieldName": "datefin",
             "fieldType": "LocalDate"
         }
     ],
+<<<<<<< HEAD
     "dto": "mapstruct",
     "service": "no",
     "pagination": "pager"
 }
+=======
+    "changelogDate": "20161127090537",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "personnage",
+    "pagination": "pagination"
+}
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

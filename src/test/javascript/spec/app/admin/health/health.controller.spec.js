@@ -2,21 +2,36 @@
 
 describe('Controller Tests', function () {
 
+<<<<<<< HEAD
     describe('HealthController', function () {
         var $scope; // actual implementations
         var createController; // local utility functions
 
         beforeEach(inject(function ($injector) {
             $scope = $injector.get('$rootScope').$new();
+=======
+    describe('JhiHealthCheckController', function () {
+        var $scope, jhiHealthService; // actual implementations
+        var createController; // local utility functions
+
+        beforeEach(inject(function ($injector, JhiHealthService) {
+            $scope = $injector.get('$rootScope').$new();
+            jhiHealthService = JhiHealthService;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             var locals = {
                 '$scope': $scope
             };
             createController = function() {
+<<<<<<< HEAD
                 $injector.get('$controller')('HealthController', locals);
+=======
+                $injector.get('$controller')('JhiHealthCheckController as vm', locals);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             };
             createController();
         }));
 
+<<<<<<< HEAD
         describe('isHealthObject and hasSubSystem', function () {
             it('should verify empty object is not a health property leaf', function () {
                 expect($scope.isHealthObject({})).toBe(false);
@@ -53,13 +68,37 @@ describe('Controller Tests', function () {
                 expect($scope.hasSubSystem(healthObject)).toBe(true);
             });
 
+=======
+        describe('baseName and subSystemName', function () {
+            it('should return the basename when it has no sub system', function () {
+                expect($scope.vm.baseName('base')).toBe('base');
+            });
+
+            it('should return the basename when it has sub systems', function () {
+                expect($scope.vm.baseName('base.subsystem.system')).toBe('base');
+            });
+
+            it('should return the sub system name', function () {
+                expect($scope.vm.subSystemName('subsystem')).toBe('');
+            });
+
+            it('should return the subsystem when it has multiple keys', function () {
+                expect($scope.vm.subSystemName('subsystem.subsystem.system')).toBe(' - subsystem.system');
+            });
+
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         describe('transformHealthData', function () {
             it('should flatten empty health data', function () {
                 var data = {};
                 var expected = [];
+<<<<<<< HEAD
                 expect($scope.transformHealthData(data)).toEqual(expected);
+=======
+                expect(jhiHealthService.transformHealthData(data)).toEqual(expected);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             });
 
             it('should flatten health data with no subsystems', function () {
@@ -90,7 +129,11 @@ describe('Controller Tests', function () {
                         'error': 'mail.a.b.c'
                     }
                 ];
+<<<<<<< HEAD
                 expect($scope.transformHealthData(data)).toEqual(expected);
+=======
+                expect(jhiHealthService.transformHealthData(data)).toEqual(expected);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             });
 
             it('should flatten health data with subsystems at level 1, main system has no additional information', function () {
@@ -148,7 +191,11 @@ describe('Controller Tests', function () {
                         }
                     }
                 ];
+<<<<<<< HEAD
                 expect($scope.transformHealthData(data)).toEqual(expected);
+=======
+                expect(jhiHealthService.transformHealthData(data)).toEqual(expected);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             });
 
             it('should flatten health data with subsystems at level 1, main system has additional information', function () {
@@ -214,7 +261,11 @@ describe('Controller Tests', function () {
                         }
                     }
                 ];
+<<<<<<< HEAD
                 expect($scope.transformHealthData(data)).toEqual(expected);
+=======
+                expect(jhiHealthService.transformHealthData(data)).toEqual(expected);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             });
 
             it('should flatten health data with subsystems at level 1, main system has additional error', function () {
@@ -278,6 +329,7 @@ describe('Controller Tests', function () {
                         }
                     }
                 ];
+<<<<<<< HEAD
                 expect($scope.transformHealthData(data)).toEqual(expected);
             });
         });
@@ -302,5 +354,11 @@ describe('Controller Tests', function () {
                 expect($scope.getModuleName()).toEqual('');
             });
         });
+=======
+                expect(jhiHealthService.transformHealthData(data)).toEqual(expected);
+            });
+        });
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     });
 });

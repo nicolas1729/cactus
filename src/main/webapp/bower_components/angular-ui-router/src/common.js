@@ -9,7 +9,12 @@ var isDefined = angular.isDefined,
     isArray = angular.isArray,
     forEach = angular.forEach,
     extend = angular.extend,
+<<<<<<< HEAD
     copy = angular.copy;
+=======
+    copy = angular.copy,
+    toJson = angular.toJson;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 function inherit(parent, extra) {
   return extend(new (extend(function() {}, { prototype: parent }))(), extra);
@@ -96,7 +101,11 @@ function inheritParams(currentParams, newParams, $current, $to) {
   var parents = ancestors($current, $to), parentParams, inherited = {}, inheritList = [];
 
   for (var i in parents) {
+<<<<<<< HEAD
     if (!parents[i].params) continue;
+=======
+    if (!parents[i] || !parents[i].params) continue;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     parentParams = objectKeys(parents[i].params);
     if (!parentParams.length) continue;
 

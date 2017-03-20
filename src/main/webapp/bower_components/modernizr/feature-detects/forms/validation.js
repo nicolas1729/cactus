@@ -41,7 +41,11 @@ define(['Modernizr', 'createElement', 'docElement', 'testStyles'], function(Mode
     // Calling form.submit() doesn't trigger interactive validation,
     // use a submit button instead
     //older opera browsers need a name attribute
+<<<<<<< HEAD
     form.innerHTML = '<input name="modTest" required><button></button>';
+=======
+    form.innerHTML = '<input name="modTest" required="required" /><button></button>';
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     testStyles('#modernizr form{position:absolute;top:-99999em}', function(node) {
       node.appendChild(form);

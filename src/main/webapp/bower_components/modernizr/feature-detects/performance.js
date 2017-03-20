@@ -7,7 +7,11 @@
   "authors": ["Scott Murphy (@uxder)"],
   "notes": [{
     "name": "W3C Spec",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/navigation-timing/"
+=======
+    "href": "https://www.w3.org/TR/navigation-timing/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "HTML5 Rocks article",
     "href": "http://www.html5rocks.com/en/tutorials/webperformance/basics/"

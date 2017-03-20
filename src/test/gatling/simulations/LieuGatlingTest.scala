@@ -25,7 +25,11 @@ class LieuGatlingTest extends Simulation {
         .acceptHeader("*/*")
         .acceptEncodingHeader("gzip, deflate")
         .acceptLanguageHeader("fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3")
+<<<<<<< HEAD
         .connection("keep-alive")
+=======
+        .connectionHeader("keep-alive")
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:33.0) Gecko/20100101 Firefox/33.0")
 
     val headers_http = Map(
@@ -34,7 +38,11 @@ class LieuGatlingTest extends Simulation {
 
     val headers_http_authenticated = Map(
         "Accept" -> """application/json""",
+<<<<<<< HEAD
         "X-CSRF-TOKEN" -> "${csrf_token}"
+=======
+        "X-XSRF-TOKEN" -> "${xsrf_token}"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     )
 
     val scn = scenario("Test the Lieu entity")
@@ -42,7 +50,11 @@ class LieuGatlingTest extends Simulation {
         .get("/api/account")
         .headers(headers_http)
         .check(status.is(401))
+<<<<<<< HEAD
         .check(headerRegex("Set-Cookie", "CSRF-TOKEN=(.*); [P,p]ath=/").saveAs("csrf_token")))
+=======
+        .check(headerRegex("Set-Cookie", "XSRF-TOKEN=(.*);[\\s]").saveAs("xsrf_token"))).exitHereIfFailed
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         .pause(10)
         .exec(http("Authentication")
         .post("/api/authentication")
@@ -50,13 +62,22 @@ class LieuGatlingTest extends Simulation {
         .formParam("j_username", "admin")
         .formParam("j_password", "admin")
         .formParam("remember-me", "true")
+<<<<<<< HEAD
         .formParam("submit", "Login"))
+=======
+        .formParam("submit", "Login")
+        .check(headerRegex("Set-Cookie", "XSRF-TOKEN=(.*);[\\s]").saveAs("xsrf_token"))).exitHereIfFailed
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         .pause(1)
         .exec(http("Authenticated request")
         .get("/api/account")
         .headers(headers_http_authenticated)
+<<<<<<< HEAD
         .check(status.is(200))
         .check(headerRegex("Set-Cookie", "CSRF-TOKEN=(.*); [P,p]ath=/").saveAs("csrf_token")))
+=======
+        .check(status.is(200)))
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         .pause(10)
         .repeat(2) {
             exec(http("Get all lieus")
@@ -69,7 +90,11 @@ class LieuGatlingTest extends Simulation {
             .headers(headers_http_authenticated)
             .body(StringBody("""{"id":null, "description":"SAMPLE_TEXT", "latitude":"0", "longitude":"0"}""")).asJSON
             .check(status.is(201))
+<<<<<<< HEAD
             .check(headerRegex("Location", "(.*)").saveAs("new_lieu_url")))
+=======
+            .check(headerRegex("Location", "(.*)").saveAs("new_lieu_url"))).exitHereIfFailed
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             .pause(10)
             .repeat(5) {
                 exec(http("Get created lieu")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###
 # swagger-ui-builder - https://github.com/swagger-api/swagger-ui/
 # Container for building the swagger-ui static site
@@ -20,3 +21,17 @@ ADD     package.json    /build/package.json
 RUN     npm install
 ADD     .   /build
 CMD     ./node_modules/gulp/bin/gulp.js serve
+=======
+FROM alpine:3.3
+
+MAINTAINER Roman Tarnavski
+
+RUN apk add --update nginx
+
+COPY nginx.conf /etc/nginx/
+ADD ./dist/ /usr/share/nginx/html
+
+EXPOSE 8080
+
+CMD nginx -g 'daemon off;'
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

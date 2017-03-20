@@ -5,7 +5,11 @@
   "tags": ["form", "forms", "requestAutocomplete", "payments"],
   "notes": [{
     "name": "WHATWG proposed spec",
+<<<<<<< HEAD
     "href": "http://wiki.whatwg.org/wiki/RequestAutocomplete"
+=======
+    "href": "https://wiki.whatwg.org/wiki/RequestAutocomplete"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

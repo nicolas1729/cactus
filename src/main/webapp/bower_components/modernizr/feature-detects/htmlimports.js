@@ -4,7 +4,11 @@
   "notes": [
     {
       "name": "W3C HTML Imports Specification",
+<<<<<<< HEAD
       "href": "http://w3c.github.io/webcomponents/spec/imports/"
+=======
+      "href": "https://w3c.github.io/webcomponents/spec/imports/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     },
     {
       "name": "HTML Imports - #include for the web",

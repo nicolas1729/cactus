@@ -1,9 +1,17 @@
 {
   "name": "angular-ui-router",
+<<<<<<< HEAD
   "version": "0.2.15",
   "main": "./release/angular-ui-router.js",
   "dependencies": {
     "angular": ">= 1.0.8"
+=======
+  "version": "0.3.1",
+  "license" : "MIT",
+  "main": "./release/angular-ui-router.js",
+  "dependencies": {
+    "angular": "^1.0.8"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },
   "ignore": [
     "**/.*",

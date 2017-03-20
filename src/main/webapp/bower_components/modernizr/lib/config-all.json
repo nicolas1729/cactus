@@ -72,6 +72,10 @@
     "css/fontface",
     "css/generatedcontent",
     "css/gradients",
+<<<<<<< HEAD
+=======
+    "css/hairline",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "css/hsla",
     "css/hyphens",
     "css/invalid",
@@ -144,6 +148,10 @@
     "es5/syntax",
     "es5/undefined",
     "es6/array",
+<<<<<<< HEAD
+=======
+    "es6/collections",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "es6/contains",
     "es6/generators",
     "es6/math",
@@ -179,6 +187,10 @@
     "iframe/srcdoc",
     "img/apng",
     "img/jpeg2000",
+<<<<<<< HEAD
+=======
+    "img/jpeg2000",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "img/jpegxr",
     "img/sizes",
     "img/srcset",
@@ -237,7 +249,14 @@
     "svg/inline",
     "svg/smil",
     "templatestrings",
+<<<<<<< HEAD
     "test/elem/bdi",
+=======
+    "test/css/scrollsnappoints",
+    "test/elem/bdi",
+    "test/img/crossorigin",
+    "test/ligatures",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "textarea/maxlength",
     "touchevents",
     "typed-arrays",

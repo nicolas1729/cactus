@@ -10,7 +10,11 @@ define(['ModernizrProto', 'cssomPrefixes'], function(ModernizrProto, prefixes) {
    * @access public
    * @function atRule
    * @param {string} prop - String name of the @-rule to test for
+<<<<<<< HEAD
    * @returns {string|false} The string representing the (possibly prefixed)
+=======
+   * @returns {string|boolean} The string representing the (possibly prefixed)
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
    * valid version of the @-rule, or `false` when it is unsupported.
    * @example
    * ```js

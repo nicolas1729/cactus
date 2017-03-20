@@ -27,7 +27,11 @@ describe('Controller Tests', function() {
                 'Auth': MockAuth
             };
             createController = function() {
+<<<<<<< HEAD
                 return $injector.get('$controller')('RequestResetController', locals);
+=======
+                return $injector.get('$controller')('RequestResetController as vm', locals);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             };
         }));
 
@@ -36,10 +40,17 @@ describe('Controller Tests', function() {
             createController();
 
             // then
+<<<<<<< HEAD
             expect($scope.success).toBeNull();
             expect($scope.error).toBeNull();
             expect($scope.errorEmailNotExists).toBeNull();
             expect($scope.resetAccount).toEqual({});
+=======
+            expect($scope.vm.success).toBeNull();
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.errorEmailNotExists).toBeNull();
+            expect($scope.vm.resetAccount).toEqual({});
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('registers a timeout handler set set focus', function() {
@@ -54,7 +65,11 @@ describe('Controller Tests', function() {
 
             // then
             expect(MockTimeout).toHaveBeenCalledWith(jasmine.any(Function));
+<<<<<<< HEAD
             expect(MockAngular.element).toHaveBeenCalledWith('[ng-model="resetAccount.email"]');
+=======
+            expect(MockAngular.element).toHaveBeenCalledWith('#email');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             expect(MockElement.focus).toHaveBeenCalled();
         });
 
@@ -62,6 +77,7 @@ describe('Controller Tests', function() {
             // given
             MockAuth.resetPasswordInit.and.returnValue($q.resolve());
             createController();
+<<<<<<< HEAD
             $scope.resetAccount.email = 'user@domain.com';
             // when
             $scope.$apply($scope.requestReset);
@@ -70,6 +86,16 @@ describe('Controller Tests', function() {
             expect($scope.success).toEqual('OK');
             expect($scope.error).toBeNull();
             expect($scope.errorEmailNotExists).toBeNull();
+=======
+            $scope.vm.resetAccount.email = 'user@domain.com';
+            // when
+            $scope.$apply($scope.vm.requestReset);
+            // then
+            expect(MockAuth.resetPasswordInit).toHaveBeenCalledWith('user@domain.com');
+            expect($scope.vm.success).toEqual('OK');
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.errorEmailNotExists).toBeNull();
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
         it('notifies of unknown email upon e-mail address not registered/400', function() {
             // given
@@ -78,6 +104,7 @@ describe('Controller Tests', function() {
                 data: 'e-mail address not registered'
             }));
             createController();
+<<<<<<< HEAD
             $scope.resetAccount.email = 'user@domain.com';
             // when
             $scope.$apply($scope.requestReset);
@@ -86,6 +113,16 @@ describe('Controller Tests', function() {
             expect($scope.success).toBeNull();
             expect($scope.error).toBeNull();
             expect($scope.errorEmailNotExists).toEqual('ERROR');
+=======
+            $scope.vm.resetAccount.email = 'user@domain.com';
+            // when
+            $scope.$apply($scope.vm.requestReset);
+            // then
+            expect(MockAuth.resetPasswordInit).toHaveBeenCalledWith('user@domain.com');
+            expect($scope.vm.success).toBeNull();
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.errorEmailNotExists).toEqual('ERROR');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('notifies of error upon error response', function() {
@@ -95,6 +132,7 @@ describe('Controller Tests', function() {
                 data: 'something else'
             }));
             createController();
+<<<<<<< HEAD
             $scope.resetAccount.email = 'user@domain.com';
             // when
             $scope.$apply($scope.requestReset);
@@ -103,6 +141,16 @@ describe('Controller Tests', function() {
             expect($scope.success).toBeNull();
             expect($scope.errorEmailNotExists).toBeNull();
             expect($scope.error).toEqual('ERROR');
+=======
+            $scope.vm.resetAccount.email = 'user@domain.com';
+            // when
+            $scope.$apply($scope.vm.requestReset);
+            // then
+            expect(MockAuth.resetPasswordInit).toHaveBeenCalledWith('user@domain.com');
+            expect($scope.vm.success).toBeNull();
+            expect($scope.vm.errorEmailNotExists).toBeNull();
+            expect($scope.vm.error).toEqual('ERROR');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
     });

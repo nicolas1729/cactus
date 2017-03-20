@@ -3,7 +3,11 @@
  * progress, resize, thumbnail, preview, validation and CORS
  * FileAPI Flash shim for old browsers not supporting FormData
  * @author  Danial  <danial.farid@gmail.com>
+<<<<<<< HEAD
  * @version 10.0.2
+=======
+ * @version 12.0.4
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
  */
 
 (function () {
@@ -294,7 +298,11 @@
       }
 
       if (FileAPI.staticPath == null) FileAPI.staticPath = basePath;
+<<<<<<< HEAD
       script.setAttribute('src', jsUrl || basePath + 'FileAPI.js');
+=======
+      script.setAttribute('src', jsUrl || basePath + 'FileAPI.min.js');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       document.getElementsByTagName('head')[0].appendChild(script);
     }
 
@@ -303,8 +311,14 @@
         throw 'Adode Flash Player need to be installed. To check ahead use "FileAPI.hasFlash"';
       }
       var fixInputStyle = function () {
+<<<<<<< HEAD
         if (elem.attr('disabled')) {
           if (fileElem) fileElem.removeClass('js-fileapi-wrapper');
+=======
+        var label = fileElem.parent();
+        if (elem.attr('disabled')) {
+          if (label) label.removeClass('js-fileapi-wrapper');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         } else {
           if (!fileElem.attr('__ngf_flash_')) {
             fileElem.unbind('change');
@@ -315,14 +329,25 @@
             });
             fileElem.attr('__ngf_flash_', 'true');
           }
+<<<<<<< HEAD
           fileElem.addClass('js-fileapi-wrapper');
           if (!isInputTypeFile(elem)) {
             fileElem.css('position', 'absolute')
+=======
+          label.addClass('js-fileapi-wrapper');
+          if (!isInputTypeFile(elem)) {
+            label.css('position', 'absolute')
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
               .css('top', getOffset(elem[0]).top + 'px').css('left', getOffset(elem[0]).left + 'px')
               .css('width', elem[0].offsetWidth + 'px').css('height', elem[0].offsetHeight + 'px')
               .css('filter', 'alpha(opacity=0)').css('display', elem.css('display'))
               .css('overflow', 'hidden').css('z-index', '900000')
               .css('visibility', 'visible');
+<<<<<<< HEAD
+=======
+            fileElem.css('width', elem[0].offsetWidth + 'px').css('height', elem[0].offsetHeight + 'px')
+              .css('position', 'absolute').css('top', '0px').css('left', '0px');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
           }
         }
       };

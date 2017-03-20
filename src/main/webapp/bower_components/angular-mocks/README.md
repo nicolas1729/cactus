@@ -20,7 +20,11 @@ You can `require` ngMock modules:
 var angular = require('angular');
 angular.module('myMod', [
   require('angular-animate'),
+<<<<<<< HEAD
   require('angular-mocks/ngMock')
+=======
+  require('angular-mocks/ngMock'),
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   require('angular-mocks/ngAnimateMock')
 ]);
 ```

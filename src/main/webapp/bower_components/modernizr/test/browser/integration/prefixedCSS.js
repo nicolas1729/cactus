@@ -31,7 +31,11 @@ describe('prefixedCSS', function() {
     return false;
   }
 
+<<<<<<< HEAD
   function domToCSS (name) {
+=======
+  function domToCSS(name) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     return name.replace(/([A-Z])/g, function(str, m1) {
       return '-' + m1.toLowerCase();
     }).replace(/^ms-/, '-ms-');
@@ -43,7 +47,11 @@ describe('prefixedCSS', function() {
     }).replace(/^-/, '');
   }
 
+<<<<<<< HEAD
   function testProp (prop) {
+=======
+  function testProp(prop) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     var prefixed = gimmePrefix(cssToDOM(prop));
     if (prefixed) {
       it('results for ' + prop + ' match the homebaked prefix finder', function() {

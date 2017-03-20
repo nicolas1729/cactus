@@ -15,13 +15,26 @@ define(['Modernizr', 'addTest', 'prefixed', 'test/indexeddb'], function(Moderniz
 
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
+<<<<<<< HEAD
     var indexeddb = prefixed('indexedDB', window);
+=======
+    var indexeddb;
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     var dbname = 'detect-blob-support';
     var supportsBlob = false;
     var request;
     var db;
 
+<<<<<<< HEAD
     if (!(Modernizr.indexeddb && Modernizr.indexeddb.deleteDatabase)) {
+=======
+    try {
+      indexeddb = prefixed('indexedDB', window);
+    } catch (e) {
+    }
+
+    if (!(Modernizr.indexeddb && Modernizr.indexeddb.deletedatabase)) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
       return false;
     }
 

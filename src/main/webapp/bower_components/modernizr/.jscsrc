@@ -5,5 +5,28 @@
   "disallowMultipleLineBreaks": null,
   "maximumLineLength": null,
   "requireCamelCaseOrUpperCaseIdentifiers": null,
+<<<<<<< HEAD
   "validateIndentation": null
+=======
+  "validateIndentation": null,
+  "jsDoc": {
+    "requireHyphenBeforeDescription": true,
+    "requireNewlineAfterDescription": true,
+    "checkRedundantReturns": true,
+    "checkParamExistence": true,
+    "requireReturnTypes": true,
+    "requireParamTypes": true,
+    "checkReturnTypes": true,
+    "checkTypes": true,
+    "checkAnnotations": {
+      "preset": "jsdoc3",
+      "extra": {
+        "access": true,
+        "optionName": true,
+        "optionProp": true,
+        "memberof": true,
+      }
+    }
+  }
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 }

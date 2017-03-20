@@ -3,7 +3,11 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
+<<<<<<< HEAD
     <logger name="com.cactus" level="DEBUG"/>
+=======
+    <logger name="com.legion.cactus" level="DEBUG"/>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF"/>
     <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
 

@@ -31,7 +31,11 @@ define(['Modernizr', 'createElement'], function(Modernizr, createElement) {
       if (bool = !!elem.canPlayType) {
         bool      = new Boolean(bool);
         bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, '');
+<<<<<<< HEAD
         bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/, '');
+=======
+        bool.mp3  = elem.canPlayType('audio/mpeg; codecs="mp3"')  .replace(/^no$/, '');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         bool.opus  = elem.canPlayType('audio/ogg; codecs="opus"') .replace(/^no$/, '');
 
         // Mimetypes accepted:

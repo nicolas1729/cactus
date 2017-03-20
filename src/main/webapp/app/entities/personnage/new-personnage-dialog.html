@@ -1,0 +1,168 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPersonnageLabel">Créer un nouveau personnage</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group" ng-show="vm.personnage.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                            ng-model="vm.personnage.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="field_nom">Nom</label>
+                    <input type="text" class="form-control" name="nom" id="field_nom"
+                            ng-model="vm.personnage.nom"
+                            required />
+                    <div ng-show="editForm.nom.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.nom.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.description" for="field_description">Description</label>
+                    <textarea class="form-control" name="fatigue" id="field_description"
+                            ng-model="vm.personnage.description"
+                            />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.nbpoint" for="field_nbpoint">Nombre de points restants: </label>
+                    <label class="control-label" name="nbpoint" id="field_nbpoint"
+                            style="color:{{couleurnbpoint()}}">
+                        {{nbpoint()}}
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6 competence">
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.compeau" for="field_compeau">Compeau</label>
+                    <input type="number" class="form-control" name="compeau" id="field_compeau"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compeau"
+                            required />
+                    <div ng-show="editForm.compeau.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compeau.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compeau.$error.number" translate="entity.validation.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.compnour" for="field_compnour">Compnour</label>
+                    <input type="number" class="form-control" name="compnour" id="field_compnour"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compnour"
+                            required />
+                    <div ng-show="editForm.compnour.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compnour.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compnour.$error.number" translate="entity.validation.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.compfabriquer" for="field_compfabriquer">Compfabriquer</label>
+                    <input type="number" class="form-control" name="compfabriquer" id="field_compfabriquer"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compfabriquer"
+                            required />
+                    <div ng-show="editForm.compfabriquer.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compfabriquer.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compfabriquer.$error.number" translate="entity.validation.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.compconstruire" for="field_compconstruire">Compconstruire</label>
+                    <input type="number" class="form-control" name="compconstruire" id="field_compconstruire"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compconstruire"
+                            required />
+                    <div ng-show="editForm.compconstruire.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compconstruire.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compconstruire.$error.number" translate="entity.validation.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="cactusApp.personnage.compcombat" for="field_compcombat">Compcombat</label>
+                    <input type="number" class="form-control" name="compcombat" id="field_compcombat"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compcombat"
+                            required />
+                    <div ng-show="editForm.compcombat.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compcombat.$error.required" translate="entity.validation.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compcombat.$error.number" translate="entity.validation.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="field_compsoigner">Compsoigner</label>
+                    <input type="number" class="form-control" name="compsoigner" id="field_compsoigner"
+                            min="0" max="5"
+                            ng-model="vm.personnage.compsoigner"
+                            required />
+                    <div ng-show="editForm.compsoigner.$invalid">
+                        <p class="help-block"
+                            ng-show="editForm.compsoigner.$error.required">
+                            This field is required.
+                        </p>
+                        <p class="help-block"
+                            ng-show="editForm.compsoigner.$error.number">
+                            This field should be a number.
+                        </p>
+                    </div>
+                </div>
+                <!--div class="form-group hidden">
+                    <label class="control-label" for="field_datecreation">Datecreation</label>
+                        <div class="input-group">
+                            <input id="field_datecreation" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="vm.personnage.datecreation" is-open="datePickerForDatecreation.status.opened"
+                            required/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="datePickerForDatecreationOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                </div-->
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

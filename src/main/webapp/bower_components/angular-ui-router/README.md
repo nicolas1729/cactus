@@ -2,7 +2,11 @@
 
 #### The de-facto solution to flexible routing with nested views
 ---
+<<<<<<< HEAD
 **[Download 0.2.15](http://angular-ui.github.io/ui-router/release/angular-ui-router.js)** (or **[Minified](http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js)**) **|**
+=======
+**[Download 0.2.18](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js)** (or **[Minified](https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.min.js)**) **|**
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 **[Guide](https://github.com/angular-ui/ui-router/wiki) |**
 **[API](http://angular-ui.github.io/ui-router/site) |**
 **[Sample](http://angular-ui.github.com/ui-router/sample/) ([Src](https://github.com/angular-ui/ui-router/tree/gh-pages/sample)) |**
@@ -15,6 +19,16 @@
 
 ---
 
+<<<<<<< HEAD
+=======
+*_Please help us out by testing the 1.0 alpha release!_* 
+
+[1.0.0alpha0 Announcement](https://github.com/angular-ui/ui-router/releases/tag/1.0.0alpha0) ([Source  Code](https://github.com/angular-ui/ui-router/tree/master)) | [Sample App](http://ui-router.github.io/sample-app/) ([Source Code](https://github.com/ui-router/sample-app)) | [Known Issues](https://github.com/angular-ui/ui-router/issues?q=is%3Aissue+is%3Aopen+label%3A1.0)
+
+
+---
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 AngularUI Router is a routing framework for [AngularJS](http://angularjs.org), which allows you to organize the
 parts of your interface into a [*state machine*](https://en.wikipedia.org/wiki/Finite-state_machine). Unlike the
 [`$route` service](http://docs.angularjs.org/api/ngRoute.$route) in the Angular ngRoute module, which is organized around URL

@@ -1,6 +1,9 @@
 {
     "name": "ngInfiniteScroll",
+<<<<<<< HEAD
     "version": "1.2.0",
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "main": "build/ng-infinite-scroll.js",
     "ignore": [
         "**/.*",

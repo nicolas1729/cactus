@@ -28,8 +28,15 @@ window.SwaggerTranslator.learn({
     "Expand Operations":"Expand Operations",
     "Raw":"Raw",
     "can't parse JSON.  Raw result":"can't parse JSON.  Raw result",
+<<<<<<< HEAD
     "Model Schema":"Model Schema",
     "Model":"Model",
+=======
+    "Example Value":"Example Value",
+    "Model Schema":"Model Schema",
+    "Model":"Model",
+    "Click to set as parameter value":"Click to set as parameter value",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "apply":"apply",
     "Username":"Username",
     "Password":"Password",
@@ -39,6 +46,10 @@ window.SwaggerTranslator.learn({
     "Contact the developer":"Contact the developer",
     "api version":"api version",
     "Response Content Type":"Response Content Type",
+<<<<<<< HEAD
+=======
+    "Parameter content type:":"Parameter content type:",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     "fetching resource":"fetching resource",
     "fetching resource list":"fetching resource list",
     "Explore":"Explore",

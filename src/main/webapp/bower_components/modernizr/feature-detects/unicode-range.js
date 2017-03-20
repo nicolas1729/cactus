@@ -4,10 +4,17 @@
   "property": "unicoderange",
   "notes": [{
     "name" : "W3C reference",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/2013/CR-css-fonts-3-20131003/#descdef-unicode-range"
   }, {
     "name" : "24 Way article",
     "href": "http://24ways.org/2011/creating-custom-font-stacks-with-unicode-range"
+=======
+    "href": "https://www.w3.org/TR/2013/CR-css-fonts-3-20131003/#descdef-unicode-range"
+  }, {
+    "name" : "24 Way article",
+    "href": "https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

@@ -1,10 +1,29 @@
 // Karma configuration
+<<<<<<< HEAD
 // http://karma-runner.github.io/0.10/config/configuration-file.html
+=======
+// http://karma-runner.github.io/0.13/config/configuration-file.html
+
+var sourcePreprocessors = ['coverage'];
+
+function isDebug() {
+    return process.argv.indexOf('--debug') >= 0;
+}
+
+if (isDebug()) {
+    // Disable JS minification if Karma is run with debug option.
+    sourcePreprocessors = [];
+}
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 module.exports = function (config) {
     config.set({
         // base path, that will be used to resolve files and exclude
+<<<<<<< HEAD
         basePath: '../../',
+=======
+        basePath: 'src/test/javascript/'.replace(/[^/]+/g, '..'),
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
@@ -12,6 +31,7 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             // bower:js
+<<<<<<< HEAD
             'main/webapp/bower_components/jquery/dist/jquery.js',
             'main/webapp/bower_components/angular/angular.js',
             'main/webapp/bower_components/angular-aria/angular-aria.js',
@@ -41,6 +61,33 @@ module.exports = function (config) {
             'test/javascript/spec/helpers/module.js',
             'test/javascript/spec/helpers/httpBackend.js',
             'test/javascript/**/!(karma.conf).js'
+=======
+            'src/main/webapp/bower_components/jquery/dist/jquery.js',
+            'src/main/webapp/bower_components/json3/lib/json3.js',
+            'src/main/webapp/bower_components/messageformat/messageformat.js',
+            'src/main/webapp/bower_components/angular/angular.js',
+            'src/main/webapp/bower_components/angular-aria/angular-aria.js',
+            'src/main/webapp/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+            'src/main/webapp/bower_components/angular-cache-buster/angular-cache-buster.js',
+            'src/main/webapp/bower_components/angular-cookies/angular-cookies.js',
+            'src/main/webapp/bower_components/ngstorage/ngStorage.js',
+            'src/main/webapp/bower_components/angular-loading-bar/build/loading-bar.js',
+            'src/main/webapp/bower_components/angular-resource/angular-resource.js',
+            'src/main/webapp/bower_components/angular-sanitize/angular-sanitize.js',
+            'src/main/webapp/bower_components/angular-ui-router/release/angular-ui-router.js',
+            'src/main/webapp/bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js',
+            'src/main/webapp/bower_components/ng-file-upload/ng-file-upload.js',
+            'src/main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
+            'src/main/webapp/bower_components/angular-mocks/angular-mocks.js',
+            // endbower
+            'src/main/webapp/app/app.module.js',
+            'src/main/webapp/app/app.state.js',
+            'src/main/webapp/app/app.constants.js',
+            'src/main/webapp/app/**/*.+(js|html)',
+            'src/test/javascript/spec/helpers/module.js',
+            'src/test/javascript/spec/helpers/httpBackend.js',
+            'src/test/javascript/**/!(karma.conf).js'
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         ],
 
 
@@ -48,6 +95,7 @@ module.exports = function (config) {
         exclude: [],
 
         preprocessors: {
+<<<<<<< HEAD
             './**/*.js': ['coverage']
         },
 
@@ -55,12 +103,24 @@ module.exports = function (config) {
 
         jenkinsReporter: {
             
+=======
+            './**/*.js': sourcePreprocessors
+        },
+
+        reporters: ['dots', 'junit', 'coverage', 'progress'],
+
+        junitReporter: {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             outputFile: '../target/test-results/karma/TESTS-results.xml'
         },
 
         coverageReporter: {
+<<<<<<< HEAD
             
             dir: '../target/test-results/coverage',
+=======
+            dir: 'target/test-results/coverage',
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             reporters: [
                 {type: 'lcov', subdir: 'report-lcov'}
             ]
@@ -91,8 +151,14 @@ module.exports = function (config) {
         singleRun: false,
 
         // to avoid DISCONNECTED messages when connecting to slow virtual machines
+<<<<<<< HEAD
         browserDisconnectTimeout : 10000, // default 2000
         browserDisconnectTolerance : 1, // default 0
         browserNoActivityTimeout : 4*60*1000 //default 10000
+=======
+        browserDisconnectTimeout: 10000, // default 2000
+        browserDisconnectTolerance: 1, // default 0
+        browserNoActivityTimeout: 4 * 60 * 1000 //default 10000
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     });
 };

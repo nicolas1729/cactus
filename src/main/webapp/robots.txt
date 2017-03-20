@@ -7,6 +7,7 @@ Disallow: /api/account/sessions
 Disallow: /api/audits/
 Disallow: /api/logs/
 Disallow: /api/users/
+<<<<<<< HEAD
 Disallow: /metrics/
 Disallow: /health/
 Disallow: /trace/
@@ -21,3 +22,7 @@ Disallow: /trace/
 Disallow: /v2/api-docs/
 Disallow: /configuration/
 Disallow: /protected/
+=======
+Disallow: /management/
+Disallow: /v2/api-docs/
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

@@ -1,6 +1,10 @@
 /*global module */
 
 var browsers = require('./test/browser/sauce-browsers.json');
+<<<<<<< HEAD
+=======
+var serveStatic = require('serve-static');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 module.exports = function(grunt) {
   'use strict';
@@ -116,7 +120,11 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
+<<<<<<< HEAD
           middleware: function(connect, options) {
+=======
+          middleware: function() {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             return [
               function(req, res, next) {
                 // catchall middleware used in testing
@@ -146,10 +154,16 @@ module.exports = function(grunt) {
 
                 next();
               },
+<<<<<<< HEAD
               connect.static(options.base)
             ];
           },
           base: '',
+=======
+              serveStatic(__dirname)
+            ];
+          },
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
           port: 9999
         }
       }

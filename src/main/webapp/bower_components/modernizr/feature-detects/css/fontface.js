@@ -5,8 +5,13 @@
   "authors": ["Diego Perini", "Mat Marquis"],
   "tags": ["css"],
   "knownBugs": [
+<<<<<<< HEAD
     "False Positive: WebOS http://github.com/Modernizr/Modernizr/issues/342",
     "False Postive: WP7 http://github.com/Modernizr/Modernizr/issues/538"
+=======
+    "False Positive: WebOS https://github.com/Modernizr/Modernizr/issues/342",
+    "False Postive: WP7 https://github.com/Modernizr/Modernizr/issues/538"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   ],
   "notes": [{
     "name": "@font-face detection routine by Diego Perini",
@@ -19,7 +24,11 @@
     "href": "https://docs.google.com/spreadsheet/ccc?key=0Ag5_yGvxpINRdHFYeUJPNnZMWUZKR2ItMEpRTXZPdUE#gid=0"
   },{
     "name": "CSS fonts on Android",
+<<<<<<< HEAD
     "href": "http://stackoverflow.com/questions/3200069/css-fonts-on-android"
+=======
+    "href": "https://stackoverflow.com/questions/3200069/css-fonts-on-android"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "@font-face and Android",
     "href": "http://archivist.incutio.com/viewlist/css-discuss/115960"

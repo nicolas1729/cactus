@@ -8,7 +8,11 @@
   "async": true,
   "notes": [{
     "name": "Wikipedia article",
+<<<<<<< HEAD
     "href": "http://en.wikipedia.org/wiki/Data_URI_scheme"
+=======
+    "href": "https://en.wikipedia.org/wiki/Data_URI_scheme"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "warnings": ["Support in Internet Explorer 8 is limited to images and linked resources like CSS files, not HTML files"]
 }

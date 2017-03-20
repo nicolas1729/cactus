@@ -24,7 +24,11 @@ define(['lodash', 'package', 'lib/build-query'], function(_, pkg, buildQuery) {
         ' * ' + pkg.name + ' v' + pkg.version + '\n' +
         ' * Build http://' + domain + '/download' + query + '\n' +
         ' *\n' +
+<<<<<<< HEAD
         ' * Copyright (c)\n *  ' + _.pluck(pkg.contributors, 'name').join('\n *  ') + '\n\n' +
+=======
+        ' * Copyright (c)\n *  ' + _.map(pkg.contributors, 'name').join('\n *  ') + '\n\n' +
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         ' * ' + pkg.license + ' License\n */\n' +
       '\n' +
         '/*\n' +

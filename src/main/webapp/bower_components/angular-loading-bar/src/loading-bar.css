@@ -99,6 +99,11 @@
   100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @keyframes loading-bar-spinner {
+<<<<<<< HEAD
   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
   100% { transform: rotate(360deg); transform: rotate(360deg); }
+=======
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 }

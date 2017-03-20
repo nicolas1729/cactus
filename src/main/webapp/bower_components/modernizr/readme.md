@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modernizr [![Build Status](https://api.travis-ci.org/Modernizr/Modernizr.svg?branch=master)](http://travis-ci.org/Modernizr/Modernizr) [![Inline docs](http://inch-ci.org/github/Modernizr/Modernizr.svg?branch=master)](http://inch-ci.org/github/Modernizr/Modernizr)
 
 ##### Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.
@@ -7,6 +8,20 @@
 
 Modernizr tests which native CSS3 and HTML5 features are available in the current UA and makes the results available to you in two ways: as properties on a global `Modernizr` object, and as classes on the `<html>` element. This information allows you to progressively enhance your pages with a granular level of control over the experience.
 
+=======
+# Modernizr [![Build Status](https://api.travis-ci.org/Modernizr/Modernizr.svg?branch=master)](https://travis-ci.org/Modernizr/Modernizr) [![Inline docs](https://inch-ci.org/github/Modernizr/Modernizr.svg?branch=master)](https://inch-ci.org/github/Modernizr/Modernizr)
+
+##### Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.
+
+- [Website](https://modernizr.com)
+- [Documentation](https://modernizr.com/docs/)
+
+Modernizr tests which native CSS3 and HTML5 features are available in the current UA and makes the results available to you in two ways: as properties on a global `Modernizr` object, and as classes on the `<html>` element. This information allows you to progressively enhance your pages with a granular level of control over the experience.
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+[code-of-conduct]: http://todogroup.org/opencodeofconduct/#Modernizr/conduct@modernizr.com
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 ## New Asynchronous Event Listeners
 
 Often times people want to know when an asynchronous test is done so they can allow their application to react to it.
@@ -15,7 +30,11 @@ supported. Synchronous tests should be handled synchronously to improve speed an
 
 The new API looks like this:
 
+<<<<<<< HEAD
 ```javascript
+=======
+```js
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 // Listen to a test, give it a callback
 Modernizr.on('testname', function( result ) {
   if (result) {
@@ -38,7 +57,11 @@ a method for exposing the `trigger` functionality. Instead, if you'd like to hav
 
 ## Test suite
 
+<<<<<<< HEAD
 Run the [test suite](http://modernizr.github.com/Modernizr/test/)
+=======
+Run the [test suite](https://modernizr.github.io/Modernizr/test/)
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 ## Building Modernizr v3
 
@@ -81,7 +104,11 @@ serve the root dir, `<url>/test/modular.html`
 
 Modernizr can be used programmatically via npm:
 
+<<<<<<< HEAD
 ```javascript
+=======
+```js
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 var modernizr = require("modernizr");
 ```
 
@@ -103,4 +130,8 @@ The second parameter is a function invoked on task completion.
 
 ## License
 
+<<<<<<< HEAD
 [MIT License](http://opensource.org/licenses/MIT)
+=======
+[MIT License](https://opensource.org/licenses/MIT)
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

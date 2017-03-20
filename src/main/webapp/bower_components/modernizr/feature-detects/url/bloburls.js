@@ -5,7 +5,11 @@
   "caniuse": "bloburls",
   "notes": [{
     "name": "W3C Working Draft",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/FileAPI/#creating-revoking"
+=======
+    "href": "https://www.w3.org/TR/FileAPI/#creating-revoking"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "tags": ["file", "url"],
   "authors": ["Ron Waldon (@jokeyrhyme)"]

@@ -4,7 +4,11 @@
   "property": "es6string",
   "notes": [{
     "name": "unofficial ECMAScript 6 draft specification",
+<<<<<<< HEAD
     "href": "http://people.mozilla.org/~jorendorff/es6-draft.html"
+=======
+    "href": "https://people.mozilla.org/~jorendorff/es6-draft.html"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "polyfills": ["es6shim"],
   "authors": ["Ron Waldon (@jokeyrhyme)"],

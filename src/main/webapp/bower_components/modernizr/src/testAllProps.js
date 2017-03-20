@@ -36,7 +36,11 @@ define(['ModernizrProto', 'testPropsAll'], function(ModernizrProto, testPropsAll
    * ```
    */
 
+<<<<<<< HEAD
   function testAllProps (prop, value, skipValueTest) {
+=======
+  function testAllProps(prop, value, skipValueTest) {
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     return testPropsAll(prop, undefined, undefined, value, skipValueTest);
   }
   ModernizrProto.testAllProps = testAllProps;

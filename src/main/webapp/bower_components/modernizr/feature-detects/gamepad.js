@@ -6,7 +6,11 @@
   "tags": ["media"],
   "notes": [{
     "name": "W3C spec",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/gamepad/"
+=======
+    "href": "https://www.w3.org/TR/gamepad/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "HTML5 Rocks tutorial",
     "href": "http://www.html5rocks.com/en/tutorials/doodles/gamepad/#toc-featuredetect"

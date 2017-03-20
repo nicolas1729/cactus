@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 <label for="{{parameterContentTypeId}}">Parameter content type:</label>
 <select name="parameterContentType" id="{{parameterContentTypeId}}">
 {{#if consumes}}
   {{#each consumes}}
   <option value="{{{this}}}">{{{this}}}</option>
+=======
+<label for="{{parameterContentTypeId}}" data-sw-translate>Parameter content type:</label>
+<select name="parameterContentType" id="{{parameterContentTypeId}}">
+{{#if consumes}}
+  {{#each consumes}}
+  <option value="{{this}}">{{this}}</option>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   {{/each}}
 {{else}}
   <option value="application/json">application/json</option>

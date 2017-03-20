@@ -4,7 +4,11 @@
   "property": "ambientlight",
   "notes": [{
     "name": "W3C Ambient Light Events",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/ambient-light/"
+=======
+    "href": "https://www.w3.org/TR/ambient-light/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

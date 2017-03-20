@@ -6,7 +6,11 @@
   "notes": [
     {
       "name": "W3C Exclusions spec",
+<<<<<<< HEAD
       "href": "http://www.w3.org/TR/css3-exclusions"
+=======
+      "href": "https://www.w3.org/TR/css3-exclusions"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     },
     {
       "name": "Example by Adobe",

@@ -4,7 +4,11 @@
   "property": "cssall",
   "notes": [{
     "name": "Spec",
+<<<<<<< HEAD
     "href": "http://dev.w3.org/csswg/css-cascade/#all-shorthand"
+=======
+    "href": "https://drafts.csswg.org/css-cascade/#all-shorthand"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/

@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 define([
+=======
+define( [
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 	"./core",
 	"./selector",
 	"./traversing",
 	"./callbacks",
 	"./deferred",
+<<<<<<< HEAD
+=======
+	"./deferred/exceptionHook",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 	"./core/ready",
 	"./data",
 	"./queue",
@@ -11,6 +19,10 @@ define([
 	"./attributes",
 	"./event",
 	"./event/alias",
+<<<<<<< HEAD
+=======
+	"./event/focusin",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 	"./manipulation",
 	"./manipulation/_evalUrl",
 	"./wrap",
@@ -28,6 +40,7 @@ define([
 	"./offset",
 	"./dimensions",
 	"./deprecated",
+<<<<<<< HEAD
 	"./exports/amd",
 	"./exports/global"
 ], function( jQuery ) {
@@ -35,3 +48,13 @@ define([
 return jQuery;
 
 });
+=======
+	"./exports/amd"
+], function( jQuery ) {
+
+"use strict";
+
+return ( window.jQuery = window.$ = jQuery );
+
+} );
+>>>>>>> 533092147c410637b99bf57166ee237aec486555

@@ -93,6 +93,15 @@ describe('generate', function() {
     window.require = stashedRequire;
   });
 
+<<<<<<< HEAD
+=======
+  it('does not modify options', function() {
+    var config = {'options': ['setClasses']};
+    generate(config);
+    expect(config.options).to.eql(['setClasses']);
+  });
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   after(function() {
     cleanup();
   });

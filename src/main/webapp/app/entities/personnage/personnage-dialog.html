@@ -1,0 +1,244 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPersonnageLabel">Modifier un personnage</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.personnage.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.personnage.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="vm.personnage.nom"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.personnage.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_mort">Mort</label>
+            <input type="checkbox" class="form-control" name="mort" id="field_mort"
+                    ng-model="vm.personnage.mort"
+                     />
+            <div ng-show="editForm.mort.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.mort.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_blessure">Blessure</label>
+            <input type="number" class="form-control" name="blessure" id="field_blessure"
+                    ng-model="vm.personnage.blessure"
+                    required min="0" max="50" />
+            <div ng-show="editForm.blessure.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.blessure.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.blessure.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.blessure.$error.max">
+                    This field cannot be more than 50.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.blessure.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_fatigue">Fatigue</label>
+            <input type="number" class="form-control" name="fatigue" id="field_fatigue"
+                    ng-model="vm.personnage.fatigue"
+                    required min="0" max="50" />
+            <div ng-show="editForm.fatigue.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.fatigue.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fatigue.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fatigue.$error.max">
+                    This field cannot be more than 50.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.fatigue.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compeau">Compeau</label>
+            <input type="number" class="form-control" name="compeau" id="field_compeau"
+                    ng-model="vm.personnage.compeau"
+                    required min="0" />
+            <div ng-show="editForm.compeau.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compeau.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compeau.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compeau.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compnour">Compnour</label>
+            <input type="number" class="form-control" name="compnour" id="field_compnour"
+                    ng-model="vm.personnage.compnour"
+                    required min="0" />
+            <div ng-show="editForm.compnour.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compnour.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compnour.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compnour.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compfabriquer">Compfabriquer</label>
+            <input type="number" class="form-control" name="compfabriquer" id="field_compfabriquer"
+                    ng-model="vm.personnage.compfabriquer"
+                    required min="0" />
+            <div ng-show="editForm.compfabriquer.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compfabriquer.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compfabriquer.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compfabriquer.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compconstruire">Compconstruire</label>
+            <input type="number" class="form-control" name="compconstruire" id="field_compconstruire"
+                    ng-model="vm.personnage.compconstruire"
+                    required min="0" />
+            <div ng-show="editForm.compconstruire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compconstruire.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compconstruire.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compconstruire.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compcombat">Compcombat</label>
+            <input type="number" class="form-control" name="compcombat" id="field_compcombat"
+                    ng-model="vm.personnage.compcombat"
+                    required min="0" />
+            <div ng-show="editForm.compcombat.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compcombat.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compcombat.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compcombat.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_compsoigner">Compsoigner</label>
+            <input type="number" class="form-control" name="compsoigner" id="field_compsoigner"
+                    ng-model="vm.personnage.compsoigner"
+                    required min="0" />
+            <div ng-show="editForm.compsoigner.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.compsoigner.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compsoigner.$error.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.compsoigner.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_datecreation">Datecreation</label>
+                <div class="input-group">
+                    <input id="field_datecreation" type="text" class="form-control" name="datecreation" uib-datepicker-popup="{{dateformat}}" ng-model="vm.personnage.datecreation" is-open="vm.datePickerOpenStatus.datecreation"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('datecreation')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_datefin">Datefin</label>
+                <div class="input-group">
+                    <input id="field_datefin" type="text" class="form-control" name="datefin" uib-datepicker-popup="{{dateformat}}" ng-model="vm.personnage.datefin" is-open="vm.datePickerOpenStatus.datefin"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('datefin')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" ng-model="vm.personnage.userId" ng-options="user.id as user.id for user in vm.users"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

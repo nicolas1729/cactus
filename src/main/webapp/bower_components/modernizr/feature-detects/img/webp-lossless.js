@@ -7,7 +7,11 @@
   "authors": ["@amandeep", "Rich Bradshaw", "Ryan Seddon", "Paul Irish"],
   "notes": [{
     "name": "Webp Info",
+<<<<<<< HEAD
     "href": "http://code.google.com/speed/webp/"
+=======
+    "href": "https://developers.google.com/speed/webp/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "Webp Lossless Spec",
     "href": "https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification"

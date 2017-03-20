@@ -43,7 +43,11 @@ $ npm install angular-loading-bar
 ```
 
 ## Why I created this
+<<<<<<< HEAD
 There are a couple projects similar to this out there, but none were ideal for me.  All implementations I've seen require that you maintain state on behalf of the loading bar.  In other words, you're setting the value of the loading/progress bar manually from potentially many different locations.  This becomes complicated when you have a very large application with several services all making independant XHR requests. It becomes even more complicated if you want these services to be loosly coupled.
+=======
+There are a couple projects similar to this out there, but none were ideal for me.  All implementations I've seen require that you maintain state on behalf of the loading bar.  In other words, you're setting the value of the loading/progress bar manually from potentially many different locations.  This becomes complicated when you have a very large application with several services all making independent XHR requests. It becomes even more complicated if you want these services to be loosly coupled.
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
 Additionally, Angular was created as a highly testable framework, so it pains me to see Angular modules without tests.  That is not the case here as this loading bar ships with 100% code coverage.
 
@@ -79,6 +83,19 @@ angular.module('myApp', ['angular-loading-bar'])
   }])
 ```
 
+<<<<<<< HEAD
+=======
+#### Customize the template:
+If you'd like to replace the default HTML template you can configure it by providing inline HTML as a string:
+
+```js
+angular.module('myApp', ['angular-loading-bar'])
+  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Loading...</div>';
+  }])
+```
+
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 #### Latency Threshold
 By default, the loading bar will only display after it has been waiting for a response for over 100ms.  This helps keep things feeling snappy, and avoids the annoyingness of showing a loading bar every few seconds on really chatty applications.  This threshold is totally configurable:
 

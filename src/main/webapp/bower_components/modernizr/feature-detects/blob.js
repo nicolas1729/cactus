@@ -7,7 +7,11 @@
   "caniuse": "blobbuilder",
   "notes": [{
     "name": "W3C spec",
+<<<<<<< HEAD
     "href": "http://dev.w3.org/2006/webapi/FileAPI/#constructorBlob"
+=======
+    "href": "https://w3c.github.io/FileAPI/#constructorBlob"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }],
   "polyfills": ["blobjs"]
 }

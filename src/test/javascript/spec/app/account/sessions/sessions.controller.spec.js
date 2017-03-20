@@ -12,10 +12,17 @@ describe('Controller Tests', function() {
         var createController; // local utility function
 
         var sessions = [{
+<<<<<<< HEAD
             formattedTokenDate: "15 October 2015",
             ipAddress: "0:0:0:0:0:0:0:1",
             series: "xxxxxx==",
             userAgent: "Mozilla/5.0"
+=======
+            tokenDate: '2015-10-15',
+            ipAddress: '0:0:0:0:0:0:0:1',
+            series: 'xxxxxx==',
+            userAgent: 'Mozilla/5.0'
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         }];
 
         beforeEach(inject(function($injector) {
@@ -30,7 +37,11 @@ describe('Controller Tests', function() {
                 'Principal': MockPrincipal
             };
             createController = function() {
+<<<<<<< HEAD
                 return $injector.get('$controller')('SessionsController', locals);
+=======
+                return $injector.get('$controller')('SessionsController as vm', locals);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             };
         }));
 
@@ -44,12 +55,21 @@ describe('Controller Tests', function() {
             // then
             expect(MockPrincipal.identity).toHaveBeenCalled();
             expect(MockSessions.getAll).toHaveBeenCalled();
+<<<<<<< HEAD
             expect($scope.success).toBeNull();
             expect($scope.error).toBeNull();
             expect($scope.account).toEqual({
                 id: 'fuzzer'
             });
             expect($scope.sessions).toEqual(sessions);
+=======
+            expect($scope.vm.success).toBeNull();
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.account).toEqual({
+                id: 'fuzzer'
+            });
+            expect($scope.vm.sessions).toEqual(sessions);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('should call delete on Sessions to invalidate a session', function() {
@@ -59,7 +79,11 @@ describe('Controller Tests', function() {
             MockSessions.getAll.and.returnValue(sessions);
             // given
             createController();
+<<<<<<< HEAD
             $scope.invalidate('xyz');
+=======
+            $scope.vm.invalidate('xyz');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
             $scope.$apply();
             // then
             expect(MockSessions.delete).toHaveBeenCalledWith({
@@ -77,11 +101,19 @@ describe('Controller Tests', function() {
             });
             // given
             createController();
+<<<<<<< HEAD
             $scope.invalidate('xyz');
             $scope.$apply();
             // then
             expect($scope.success).toBeNull();
             expect($scope.error).toBe('ERROR');
+=======
+            $scope.vm.invalidate('xyz');
+            $scope.$apply();
+            // then
+            expect($scope.vm.success).toBeNull();
+            expect($scope.vm.error).toBe('ERROR');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
 
         it('should call notify of success upon session invalidation', function() {
@@ -94,11 +126,19 @@ describe('Controller Tests', function() {
             });
             // given
             createController();
+<<<<<<< HEAD
             $scope.invalidate('xyz');
             $scope.$apply();
             // then
             expect($scope.error).toBeNull();
             expect($scope.success).toBe('OK');
+=======
+            $scope.vm.invalidate('xyz');
+            $scope.$apply();
+            // then
+            expect($scope.vm.error).toBeNull();
+            expect($scope.vm.success).toBe('OK');
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         });
     });
 });

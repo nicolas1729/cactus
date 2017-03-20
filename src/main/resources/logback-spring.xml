@@ -22,7 +22,11 @@
     </appender>
 -->
 
+<<<<<<< HEAD
     <logger name="com.cactus" level="@logback.loglevel@"/>
+=======
+    <logger name="com.legion.cactus" level="#logback.loglevel#"/>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>
@@ -30,12 +34,23 @@
     <logger name="ch.qos.logback" level="WARN"/>
     <logger name="com.codahale.metrics" level="WARN"/>
     <logger name="com.ryantenney" level="WARN"/>
+<<<<<<< HEAD
     <logger name="com.sun.xml.internal.bind" level="WARN"/>
     <logger name="com.zaxxer" level="WARN"/>
     <logger name="io.undertow" level="WARN"/>
     <logger name="org.apache" level="WARN"/>
     <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
     <logger name="org.bson" level="WARN"/>
+=======
+    <logger name="com.sun" level="WARN"/>
+    <logger name="com.zaxxer" level="WARN"/>
+    <logger name="io.undertow" level="WARN"/>
+    <logger name="net.sf.ehcache" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
+    <logger name="org.bson" level="WARN"/>
+    <logger name="org.elasticsearch" level="WARN"/>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     <logger name="org.hibernate.validator" level="WARN"/>
     <logger name="org.hibernate" level="WARN"/>
     <logger name="org.hibernate.ejb.HibernatePersistence" level="OFF"/>
@@ -47,13 +62,21 @@
     <logger name="org.xnio" level="WARN"/>
     <logger name="springfox" level="WARN"/>
     <logger name="sun.rmi" level="WARN"/>
+<<<<<<< HEAD
+=======
+    <logger name="liquibase" level="WARN"/>
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
     <logger name="sun.rmi.transport" level="WARN"/>
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
         <resetJUL>true</resetJUL>
     </contextListener>
 
+<<<<<<< HEAD
     <root level="@logback.loglevel@">
+=======
+    <root level="#logback.loglevel#">
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         <appender-ref ref="CONSOLE"/>
     </root>
 

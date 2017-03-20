@@ -8,7 +8,11 @@
   "builderAliases": ["css_remunit"],
   "notes": [{
     "name": "W3C Spec",
+<<<<<<< HEAD
     "href": "http://www.w3.org/TR/css3-values/#relative0"
+=======
+    "href": "https://www.w3.org/TR/css3-values/#relative0"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   },{
     "name": "Font Size with rem by Jonathan Snook",
     "href": "http://snook.ca/archives/html_and_css/font-size-with-rem"

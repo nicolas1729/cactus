@@ -10,7 +10,11 @@
     "href": "https://github.com/Modernizr/Modernizr/issues/572"
   },{
     "name": "JSFiddle Example",
+<<<<<<< HEAD
     "href": "http://jsfiddle.net/glsee/JDsWQ/4/"
+=======
+    "href": "https://jsfiddle.net/glsee/JDsWQ/4/"
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   }]
 }
 !*/
@@ -26,7 +30,11 @@ define(['Modernizr', 'docElement', 'testStyles', 'roundedEquals'], function(Mode
     var expectedWidth = parseInt(Math.max(one_vw, one_vh) * 50, 10);
     var compWidth = parseInt((window.getComputedStyle ?
                           getComputedStyle(elem, null) :
+<<<<<<< HEAD
                           elem.currentStyle)['width'], 10);
+=======
+                          elem.currentStyle).width, 10);
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
 
     Modernizr.addTest('cssvmaxunit', roundedEquals(expectedWidth, compWidth) || roundedEquals(expectedWidth, compWidth - scrollbarWidth));
   }, 3);

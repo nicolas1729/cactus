@@ -36,6 +36,7 @@ function $ViewProvider() {
         if (options.view) {
           result = $templateFactory.fromConfig(options.view, options.params, options.locals);
         }
+<<<<<<< HEAD
         if (result && options.notify) {
         /**
          * @ngdoc event
@@ -62,6 +63,8 @@ function $ViewProvider() {
          */
           $rootScope.$broadcast('$viewContentLoading', options);
         }
+=======
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
         return result;
       }
     };

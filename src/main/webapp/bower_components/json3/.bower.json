@@ -41,7 +41,11 @@
     "tag": "v3.3.2",
     "commit": "dec5c2a5dc723ff867caa32a81ed93ab814f7426"
   },
+<<<<<<< HEAD
   "_source": "git://github.com/bestiejs/json3.git",
+=======
+  "_source": "https://github.com/bestiejs/json3.git",
+>>>>>>> 533092147c410637b99bf57166ee237aec486555
   "_target": "3.3.2",
   "_originalSource": "json3"
 }
